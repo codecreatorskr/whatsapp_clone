@@ -46,7 +46,7 @@ class ChatTabBarScreen extends StatelessWidget {
                   builder: (context) => FittedBox(
                     // fit: BoxFit.fill,
                     child: Dialog(
-                      shape:const  ContinuousRectangleBorder(),
+                      shape: const ContinuousRectangleBorder(),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
