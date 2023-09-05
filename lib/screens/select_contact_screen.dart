@@ -1,20 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/screens/new_community_screen.dart';
 import 'package:whatsapp_clone/screens/new_group_screen.dart';
-import 'package:whatsapp_clone/utils/url_list.dart';
-
-List<Map<String, IconData>> contactIconList = [
-  {
-    'icons': Icons.group,
-  },
-  {
-    'icons': Icons.group_add,
-  },
-  // {'icons': const Icon(Icons.qr_code)},
-  {
-    'icons': Icons.groups,
-  }
-];
+import 'package:whatsapp_clone/utils/database.dart';
 
 class ChatListContact extends StatelessWidget {
   const ChatListContact({super.key});
@@ -73,8 +60,10 @@ class ChatListContact extends StatelessWidget {
                     },
                     child: const Text(
                       'New group',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w500, fontSize: 18,),
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 18,
+                      ),
                     ),
                   ),
                 ),
@@ -146,7 +135,7 @@ class ChatListContact extends StatelessWidget {
                         fontWeight: FontWeight.w500, fontSize: 18),
                   ),
                   subtitle: Text(
-                    chatListSubtitle[index]['Message'],
+                    chatListSubtitle[index]['message'],
                   ),
                 );
               },
@@ -163,7 +152,7 @@ class ChatListContact extends StatelessWidget {
             ListView.builder(
               physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
-              itemCount: invitetowhatsapplist.length,
+              itemCount: invitedwhatsapplist.length,
               itemBuilder: (context, index) {
                 return ListTile(
                   leading: const Icon(
@@ -172,7 +161,7 @@ class ChatListContact extends StatelessWidget {
                     size: 42,
                   ),
                   title: Text(
-                    invitetowhatsapplist[index]['Name'],
+                    invitedwhatsapplist[index]['Name'],
                     style: const TextStyle(
                         fontWeight: FontWeight.w500, fontSize: 18),
                   ),

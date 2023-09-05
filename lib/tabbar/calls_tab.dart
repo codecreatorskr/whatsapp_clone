@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/utils/database.dart';
 
 class CallsTabBar extends StatelessWidget {
   const CallsTabBar({
@@ -20,38 +21,57 @@ class CallsTabBar extends StatelessWidget {
           color: Colors.white,
         ),
       ),
-      body: const Column(
-        children: [
-          ListTile(
-            iconColor: Colors.white,
-            leading: CircleAvatar(
-                backgroundColor: Colors.teal,
-                // backgroundImage: AssetImage('assets/images/tony.jpg'),
-                child: Icon(
-                  Icons.link_outlined,
-                  color: Colors.white,
-                )),
-            title: Text(
-              "Create call link",
-              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const ListTile(
+              iconColor: Colors.white,
+              leading: CircleAvatar(
+                  backgroundColor: Colors.teal,
+                  // backgroundImage: AssetImage('assets/images/tony.jpg'),
+                  child: Icon(
+                    Icons.link_outlined,
+                    color: Colors.white,
+                  )),
+              title: Text(
+                "Create call link",
+                style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
+              ),
+              subtitle: Text("Share a link for your WhatsApp call"),
             ),
-            subtitle: Text("Share a link for your WhatsApp call"),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 10),
-            child: Row(
-              children: [
-                Text(
-                  'Recent',
-                  style: TextStyle(fontSize: 17),
-                )
-              ],
+            const Padding(
+              padding: EdgeInsets.only(left: 10),
+              child: Row(
+                children: [
+                  Text(
+                    'Recent',
+                    style: TextStyle(fontSize: 17),
+                  )
+                ],
+              ),
             ),
-          ),
-          // ListTile(
-          //   title: Text(chatList[index]['avatar']),
-          // )
-        ],
+            ListView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: chatList.length,
+              itemBuilder: (BuildContext context, int index) {
+                return ListTile(
+                  leading: CircleAvatar(
+                    backgroundImage: AssetImage(
+                      chatList[index]['avatar'],
+                    ),
+                  ),
+                  title: Text(
+                    chatList[index]['name'],
+                    style: const TextStyle(
+                        fontWeight: FontWeight.w600, fontSize: 18),
+                  ),
+                  subtitle: Text(chatListSubtitle[index]['message']),
+                );
+              },
+            ),
+          ],
+        ),
       ),
     );
   }

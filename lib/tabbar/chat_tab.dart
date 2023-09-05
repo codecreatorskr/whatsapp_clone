@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/screens/chatbox_contact_screen.dart';
-import 'package:whatsapp_clone/screens/chatting_sccreen.dart';
-import 'package:whatsapp_clone/utils/url_list.dart';
+import 'package:whatsapp_clone/screens/select_contact_screen.dart';
+import 'package:whatsapp_clone/screens/chatting_screen.dart';
+import 'package:whatsapp_clone/utils/database.dart';
 
 class ChatTabBarScreen extends StatelessWidget {
   const ChatTabBarScreen({
@@ -111,7 +111,9 @@ class ChatTabBarScreen extends StatelessWidget {
             ),
             subtitle: Padding(
               padding: const EdgeInsets.only(left: 0),
-              child: Text(chatListSubtitle[index]['Message'].toString()),
+              child: Text(
+                userMessageList[index],
+              ),
             ),
             trailing: const Text("Yesterday"),
           );

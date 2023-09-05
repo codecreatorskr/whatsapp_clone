@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/screens/edit_stauts_screen.dart';
-import 'package:whatsapp_clone/utils/url_list.dart';
+import 'package:whatsapp_clone/utils/database.dart';
 
 class StatusTabBar extends StatelessWidget {
   const StatusTabBar({

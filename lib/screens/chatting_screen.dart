@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/utils/url_list.dart';
+import 'package:whatsapp_clone/utils/database.dart';
 
 final textController = TextEditingController(text: 'Hii');
 
@@ -13,8 +13,19 @@ class ChattingPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[350],
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            Padding(
+              padding: const EdgeInsets.only(right: 5),
+              child: InkWell(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: const Icon(Icons.arrow_back),
+              ),
+            ),
             CircleAvatar(
               backgroundImage: AssetImage(
                 chatList[0]['avatar'],
@@ -22,10 +33,22 @@ class ChattingPage extends StatelessWidget {
             ),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 15),
-              child: Text(
-                'Saurabh',
-                style:
-                    TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Saurabh',
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.w500),
+                  ),
+                  Text(
+                    'last seen today at 06:00',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 10.5,
+                        fontWeight: FontWeight.w500),
+                  ),
+                ],
               ),
             )
           ],
@@ -58,17 +81,29 @@ class ChattingPage extends StatelessWidget {
         children: [
           const Expanded(
             child: SizedBox(),
-            // child: Align(
-            //     alignment: Alignment.bottomRight,
-            //     child: SizedBox(child: Icon(Icons.mic))),
           ),
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.end,
+          //   children: [
+          //     CircleAvatar(
+          //       backgroundColor: Colors.teal,
+          //       child: IconButton(
+          //         onPressed: () {},
+          //         icon: Icon(
+          //           Icons.mic,
+          //           color: Colors.white,
+          //         ),
+          //       ),
+          //     )
+          //   ],
+          // ),
           Align(
             alignment: Alignment.bottomLeft,
             child: Padding(
               padding: const EdgeInsets.only(
                 right: 80,
                 left: 5,
-                bottom: 13,
+                bottom: 18,
               ),
               child: TextField(
                 onChanged: (value) {

@@ -1,5 +1,7 @@
 //Drawer list (images links)
 
+import 'package:flutter/material.dart';
+
 List<Map<String, dynamic>> myList = [
   {
     'src':
@@ -115,23 +117,77 @@ List<Map<String, dynamic>> chatList = [
   {"avatar": "assets/images/avatar.png", "name": "John"},
   {"avatar": "assets/images/avatar2.jpg", "name": "Mahakal"},
   {"avatar": "assets/images/avatar3.jpg", "name": "Raj Kr"},
-  // {"avatar": "assets/images/avatar3.jpg", "Name": "Kumar"},
+  {"avatar": "assets/images/avatar3.jpg", "name": "Kumar"},
 ];
-
-//status Tab List
+//*****************USer Message List******************/
+List<String> userMessageList = [
+  "hey! Good Morning",
+  "Inbox happiness loading...",
+  "hey ! how are you",
+  "Knock, knock! Who's there? Your awesome message!",
+  "A message is like a smile that pops up on your screen. 😁",
+  "Let's chat! I've got coffee and emojis ready. ☕😄",
+  "Incoming positivity!",
+  "The best kind of notifications are from friends. 📱❤️",
+  "Unread messages are like little surprises waiting to be opened.",
+  "🔔 Brace yourself for incoming awesomeness! 🎉",
+  "💌 New message alert: Your thoughts are on the way! 📬",
+  "📲 Ping! Your message radar is on point! 📡",
+  "📥 Inbox unlocked! What's on your mind? 🤔",
+  "📝 Text me like it's the best story you've ever read. 📖",
+  "💬 The inbox is open, and my heart is ready. ❤️",
+  "💬 Ready to receive your brilliance! 🌟",
+  "📩 Every message is a piece of someone's heart. ❤️",
+  "📱 Waiting for your message like it's the best surprise. 🎁",
+  "💬 Hit me with your words of wisdom! 💡",
+  "📲 My phone is buzzing with anticipation! 📚",
+  "📬 Messages from you are my favorite notifications! ❤️",
+  "Hit me with your words of wisdom!",
+  "I can't wait to see what you have to say!",
+  "The excitement of a new message never gets old.",
+  "Your message just brightened my day!",
+  "Life is short, and so are my messages. 😄",
+  "A virtual hug in the form of a message.",
+  "My phone just got a little happier because of you!",
+  "Brace yourself for incoming awesomeness!",
+  "New message alert: Your thoughts are on the way!",
+  "Ping! Your message radar is on point!",
+  "Let the conversations begin!",
+  "Messages: The modern-day love letters.",
+  "The inbox is open, and my heart is ready.",
+  "Inbox unlocked! What's on your mind?",
+  "Text me like it's the best story you've ever read.",
+  "Every message is a piece of someone's heart.",
+  "Waiting for your message like it's the best surprise.",
+  "Hit me with your words of wisdom!",
+  "Ready to receive your brilliance!",
+  "One message can change the course of a day.",
+  "My phone is buzzing with anticipation!",
+  "Messages from you are my favorite notifications!",
+  "Your new message has been arrived",
+  "Message Description 1",
+  "Message Description 2",
+  "Your new message has been arrived",
+  "hey ! how are you",
+  "hey ! how are you",
+  "Message Description",
+  " New Message",
+  "Message Description 2",
+  "Message Description 2",
+];
 List<Map<String, dynamic>> chatListSubtitle = [
-  {"Message": "Message Description", 'time': " Today, 00:00"},
-  {"Message": "Your new message has been arrived", 'time': " Today, 12:00"},
-  {"Message": "Message Description 1", 'time': " Today,04:00"},
-  {"Message": "Message Description 2", 'time': " Today, 09:00"},
-  {"Message": "Your new message has been arrived", 'time': " Today, 05:00"},
-  {"Message": "Good Morning", 'time': " Today, 23:00"},
-  {"Message": "hey ! how are you", 'time': " Today, 05:00"},
-  {"Message": "hey ! how are you", 'time': " Today, 15:00"},
-  {"Message": "Message Description", 'time': " Today, 11:00"},
-  {"Message": " New Message", 'time': " Today, 02:00"},
-  {"Message": "Message Description 2", 'time': " Today, 22:00"},
-  // {"Message": "Message Description 2", 'time': " Today, 10:00"},
+  {"message": "Message Description", 'time': " Today, 00:00"},
+  {"message": "Your new message has been arrived", 'time': " Today, 12:00"},
+  {"message": "Message Description 1", 'time': " Today,04:00"},
+  {"message": "Message Description 2", 'time': " Today, 09:00"},
+  {"message": "Your new message has been arrived", 'time': " Today, 05:00"},
+  {"message": "Good Morning", 'time': " Today, 23:00"},
+  {"message": "hey ! how are you", 'time': " Today, 05:00"},
+  {"message": "hey ! how are you", 'time': " Today, 15:00"},
+  {"message": "Message Description", 'time': " Today, 11:00"},
+  {"message": " New Message", 'time': " Today, 02:00"},
+  {"message": "Message Description 2", 'time': " Today, 22:00"},
+  {"message": "Message Description 2", 'time': " Today, 10:00"},
 ];
 
 List<Map<String, dynamic>> statusIcon = [
@@ -150,16 +206,15 @@ List<Map<String, dynamic>> menuText = [
   },
 ];
 
-List<Map<String, dynamic>> invitetowhatsapplist = [
+//➡️➡️Select contact Name and invite  text list.
+List<Map<String, dynamic>> invitedwhatsapplist = [
   {"Name": "Aaravi", 'invite': " Invite"},
   {"Name": "Aditi", 'invite': "Invite"},
   {"Name": "Aahana", 'invite': " Invite"},
   {"Name": "Baadal", 'invite': "Invite"}
 ];
-// {"Name": "Bablu", 'time': " Today, 05:00"},
-// {"Name": "Chaya", 'time': " Today, 23:00"},
-// {"Name": "Golu", 'time': " Today, 05:00"},
 
+//➡️➡️ WhatsApp New Group Images and Name list.
 List<Map<String, dynamic>> nameList = [
   {"avatar": "assets/images/avatar1.png", "name": "Aaliyah"},
   {"avatar": "assets/images/tony.jpg", "name": "Abigail"},
@@ -190,6 +245,7 @@ List<Map<String, dynamic>> nameList = [
   {"avatar": "assets/images/avatar4.jpg", "name": "Zora"},
 ];
 
+// WhatsApp New Group Subtitle
 List<String> newgroupSubtitle = [
   'Available',
   'Busy',
@@ -217,82 +273,40 @@ List<String> newgroupSubtitle = [
   'At work',
   'Battery about to die',
   'Can\'t talk, WhatsApp only',
-  'In a meeting', 
-  
+  'In a meeting',
 ];
 
+//*************Icons_List*******************/
+List<Map<String, IconData>> contactIconList = [
+  {
+    'icons': Icons.group,
+  },
+  {
+    'icons': Icons.group_add,
+  },
+  {
+    'icons': Icons.groups,
+  }
+];
 
-
-
-
-
-
-
-
-
-
-
-
-
-// import 'package:flutter/material.dart';
-
-// List<Map<String, dynamic>> myImages = [
-//   // 'https://rukminim2.flixcart.com/fk-p-flap/1100/500/image/97f24748652e61ae.png?q=20',
-//   // 'https://picsum.photos/id/237/200/300',
-//   // 'https://picsum.photos/seed/picsum/200/300',
-//   // 'https://picsum.photos/200/300?grayscale',
-
-//   {'name': 'https://picsum.photos/200/300?grayscale', 'age': 'casda'},
-//   // {'name': 'Shreyansh', 'age': '23'},
-//   // {'name': 'Saorabh', 'age': 22},
-//   // {'name': 'Ajay', 'age': 22},
-//   // {'name': 'Ajay', 'age': 22},
-//   // {'name': 'Ajay', 'age': 22},
-//   // {'name': 'Ajay', 'age': 22},
-//   // {'name': 'Ajay', 'age': 22},
-//   // {'name': 'Ajay', 'age': 22},
-//   // {'name': 'Ajay', 'age': 22},
-//   // {'name': 'Ajay', 'age': 22},
-//   // {'name': 'Ajay', 'age': 22},
-//   // {'name': 'Ajay', 'age': 22},
-//   // {'name': 'Ajay', 'age': 22},
-//   // {'name': 'Ajay', 'age': 22},
-//   // {'name': 'Ajay', 'age': 22},
-//   // {'name': 'Ajay', 'age': 22},
-//   // {'name': 'Ajay', 'age': 22},
-// ];
-
-// class ListScreen extends StatelessWidget {
-//   const ListScreen({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(title: const Text("Lists")),
-//       body: SingleChildScrollView(
-//         scrollDirection: Axis.horizontal,
-//         physics: AlwaysScrollableScrollPhysics(),
-//         child: Column(
-//           children: List.generate(
-//             myImages.length,
-//             (index) => Padding(
-//               padding: const EdgeInsets.all(8.0),
-//               child: Row(
-//                 mainAxisAlignment: MainAxisAlignment.start,
-//                 children: [
-//                   // Image.network(myImages[index]),
-//                   Image.network(
-//                     myImages[index]['name'],
-//                   ),
-//                   Text(myImages[index]['age'].toString()),
-//                   // Text(myImages[index]['age'].toString()),
-//                   // Text(myImages[index][index].toString()),
-//                 ],
-//               ),
-//             ),
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
+//Random list
+List<Map<String, dynamic>> nameAndAge = [
+  {'name': 'https://picsum.photos/200/300?grayscale', 'age': 'casda'},
+  {'name': 'Shreyansh', 'age': '23'},
+  {'name': 'Saorabh', 'age': 22},
+  {'name': 'Ajay', 'age': 22},
+  {'name': 'Ajay', 'age': 22},
+  {'name': 'Ajay', 'age': 22},
+  {'name': 'Ajay', 'age': 22},
+  {'name': 'Ajay', 'age': 22},
+  {'name': 'Ajay', 'age': 22},
+  {'name': 'Ajay', 'age': 22},
+  {'name': 'Ajay', 'age': 22},
+  {'name': 'Ajay', 'age': 22},
+  {'name': 'Ajay', 'age': 22},
+  {'name': 'Ajay', 'age': 22},
+  {'name': 'Ajay', 'age': 22},
+  {'name': 'Ajay', 'age': 22},
+  {'name': 'Ajay', 'age': 22},
+  {'name': 'Ajay', 'age': 22},
+];
