@@ -275,6 +275,20 @@ List<String> newgroupSubtitle = [
   'Can\'t talk, WhatsApp only',
   'In a meeting',
 ];
+List<String> callssubtitle = [
+  'Available ☺️',
+  'Busy ',
+  'At school At the movie 🏫',
+  'At work',
+  'Battery about to die',
+  'Can\'t talk, WhatsApp only',
+  'In a meeting',
+  'At the gym',
+  'Slepping',
+  'Urgent calls only',
+  'Available',
+  'Busy',
+];
 
 //*************Icons_List*******************/
 List<Map<String, IconData>> contactIconList = [
