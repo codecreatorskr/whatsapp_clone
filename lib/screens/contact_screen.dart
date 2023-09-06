@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/screens/new_community_screen.dart';
-import 'package:whatsapp_clone/screens/new_group_screen.dart';
+import 'package:whatsapp_clone/screens/create_call_link.dart';
 import 'package:whatsapp_clone/utils/database.dart';
 
 class ContactSelectScreen extends StatelessWidget {
@@ -31,17 +30,27 @@ class ContactSelectScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const ListTile(
-              leading: CircleAvatar(
-                backgroundColor: Colors.teal,
-                child: Icon(
-                  Icons.insert_link,
-                  color: Colors.white,
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const CreateCallLinkScreen(),
+                  ),
+                );
+              },
+              child: const ListTile(
+                leading: CircleAvatar(
+                  backgroundColor: Colors.teal,
+                  child: Icon(
+                    Icons.insert_link,
+                    color: Colors.white,
+                  ),
                 ),
-              ),
-              title: Text(
-                'New call links',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 19),
+                title: Text(
+                  'New call links',
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 19),
+                ),
               ),
             ),
             const ListTile(
