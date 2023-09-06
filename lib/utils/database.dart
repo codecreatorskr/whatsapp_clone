@@ -247,9 +247,9 @@ List<Map<String, dynamic>> nameList = [
 
 // WhatsApp New Group Subtitle
 List<String> newgroupSubtitle = [
-  'Available',
-  'Busy',
-  'At schoolAt the movie',
+  'Available ☺️',
+  'Busy ',
+  'At school At the movie 🏫',
   'At work',
   'Battery about to die',
   'Can\'t talk, WhatsApp only',

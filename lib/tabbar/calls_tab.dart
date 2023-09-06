@@ -1,6 +1,5 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/screens/contact_screen.dart';
 import 'package:whatsapp_clone/utils/database.dart';
 
 class CallsTabBar extends StatelessWidget {
@@ -13,7 +12,12 @@ class CallsTabBar extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          log("Calls");
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const ContactSelectScreen(),
+            ),
+          );
         },
         backgroundColor: const Color.fromRGBO(18, 140, 126, 2),
         child: const Icon(
