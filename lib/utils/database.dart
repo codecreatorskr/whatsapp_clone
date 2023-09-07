@@ -109,23 +109,123 @@ List<Map<String, dynamic>> chatList = [
     "avatar": "assets/images/dp.webp",
     "name": "Saurabh",
     'messages': [
-      {'message': 'Hello !!', 'time': '  12:00 ✓✓'},
-      {'message': 'How are you', 'time': '  05:05 ✓'},
-      {'message': 'I am fine.', 'time': '  08:25 ✓✓'},
-      {'message': 'What about you', 'time': '  06:10 ✓'},
+      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'How are you', 'time': '05:05'},
+      {'message': 'I am fine.', 'time': '08:25'},
+      {'message': 'What about you', 'time': '06:10'},
     ]
   },
-  {"avatar": "assets/images/tony.jpg", "name": "Suraj"},
-  {"avatar": "assets/images/dp3bg.jpg", "name": "Ajay Kr"},
-  {"avatar": "assets/images/dp girl 6.jpeg", "name": " Anaya "},
-  {"avatar": "assets/images/images123.jpg", "name": "Rimjhim "},
-  {"avatar": "assets/images/dp2.jpg", "name": "Rajnish"},
-  {"avatar": "assets/images/Ironman art.jpeg", "name": "Sachin"},
-  {"avatar": "assets/images/dp4.jpg", "name": "Raj Kr"},
-  {"avatar": "assets/images/dp5.jpeg", "name": "John"},
-  {"avatar": "assets/images/avatar2.jpg", "name": "Mahakal"},
-  {"avatar": "assets/images/avatar4.jpg", "name": "Raj Kr"},
-  {"avatar": "assets/images/avatar3.jpg", "name": "Kumar"},
+  {
+    "avatar": "assets/images/tony.jpg",
+    "name": "Suraj",
+    'messages': [
+      {'message': 'Hello surajs!!', 'time': '12:00'},
+      {'message': 'How are you', 'time': '05:05'},
+      {'message': 'I am fine.', 'time': '08:25'},
+      {'message': 'What about you', 'time': '06:10'},
+      // {'message': 'What about you', 'time': '06:10'},
+    ]
+  },
+  {
+    "avatar": "assets/images/dp3bg.jpg",
+    "name": "Ajay Kr",
+    'messages': [
+      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'How are you', 'time': '05:05'},
+      {'message': 'I am fine.', 'time': '08:25'},
+      {'message': 'What about you', 'time': '06:10'},
+    ]
+  },
+  {
+    "avatar": "assets/images/dp girl 6.jpeg",
+    "name": " Anaya ",
+    'messages': [
+      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'How are you', 'time': '05:05'},
+      {'message': 'I am fine.', 'time': '08:25'},
+      {'message': 'What about you', 'time': '06:10'},
+    ]
+  },
+  {
+    "avatar": "assets/images/images123.jpg",
+    "name": "Rimjhim ",
+    'messages': [
+      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'How are you', 'time': '05:05'},
+      {'message': 'I am fine.', 'time': '08:25'},
+      {'message': 'What about you', 'time': '06:10'},
+    ]
+  },
+  {
+    "avatar": "assets/images/dp2.jpg",
+    "name": "Rajnish",
+    'messages': [
+      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'How are you', 'time': '05:05'},
+      {'message': 'I am fine.', 'time': '08:25'},
+      {'message': 'What about you', 'time': '06:10'},
+    ]
+  },
+  {
+    "avatar": "assets/images/Ironman art.jpeg",
+    "name": "Sachin",
+    'messages': [
+      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'How are you', 'time': '05:05'},
+      {'message': 'I am fine.', 'time': '08:25'},
+      {'message': 'What about you', 'time': '06:10'},
+    ]
+  },
+  {
+    "avatar": "assets/images/dp4.jpg",
+    "name": "Raj Kr",
+    'messages': [
+      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'How are you', 'time': '05:05'},
+      {'message': 'I am fine.', 'time': '08:25'},
+      {'message': 'What about you', 'time': '06:10'},
+    ]
+  },
+  {
+    "avatar": "assets/images/dp5.jpeg",
+    "name": "Ritik",
+    'messages': [
+      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'How are you', 'time': '05:05'},
+      {'message': 'I am fine.', 'time': '08:25'},
+      {'message': 'What about you', 'time': '06:10'},
+    ]
+  },
+  {
+    "avatar": "assets/images/avatar2.jpg",
+    "name": "Mahakal",
+    'messages': [
+      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'How are you', 'time': '05:05'},
+      {'message': 'I am fine.', 'time': '08:25'},
+      {'message': 'What about you', 'time': '06:10'},
+    ]
+  },
+  {
+    "avatar": "assets/images/avatar4.jpg",
+    "name": "Raj Kr",
+    'messages': [
+      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'How are you', 'time': '05:05'},
+      {'message': 'I am fine.', 'time': '08:25'},
+      {'message': 'What about you', 'time': '06:10'},
+    ]
+  },
+  {
+    "avatar": "assets/images/avatar3.jpg",
+    "name": "Kumar",
+    'messages': [
+      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'How are you', 'time': '05:05'},
+      {'message': 'I am fine.', 'time': '08:25'},
+      {'message': 'What about you', 'time': '06:10'},
+    ]
+  },
 ];
 
 //*****************USer Message List******************/
@@ -314,50 +414,50 @@ List<Map<String, IconData>> contactIconList = [
 
 //***********************************Chatting Screen*******************************************//
 
-List<Map<String, dynamic>> chats = [
-  {'message': 'Hello !!', 'time': '  12:00 ✓✓'},
-  {'message': 'How are you', 'time': '  05:05 ✓'},
-  {'message': 'I am fine.', 'time': '  08:25 ✓✓'},
-  {'message': 'What about you', 'time': '  06:10 ✓'},
-];
-List<Map<String, dynamic>> chat = [
-  {'message': 'Hello !!', 'time': TimeOfDay.now().hour.toString()},
-  {'message': 'How are you', 'time': TimeOfDay.now().hour.toString()},
-  {'message': 'I am fine.', 'time': TimeOfDay.now().hour.toString()},
-  {'message': 'What about you.', 'time': TimeOfDay.now().hour.toString()},
-];
+// List<Map<String, dynamic>> chats = [
+//   {'message': 'Hello !!', 'time': '  12:00 ✓✓'},
+//   {'message': 'How are you', 'time': '  05:05 ✓'},
+//   {'message': 'I am fine.', 'time': '  08:25 ✓✓'},
+//   {'message': 'What about you', 'time': '  06:10 ✓'},
+// ];
+// List<Map<String, dynamic>> chat = [
+//   {'message': 'Hello !!', 'time': TimeOfDay.now().hour.toString()},
+//   {'message': 'How are you', 'time': TimeOfDay.now().hour.toString()},
+//   {'message': 'I am fine.', 'time': TimeOfDay.now().hour.toString()},
+//   {'message': 'What about you.', 'time': TimeOfDay.now().hour.toString()},
+// ];
 
 //List of WhatsApp chat images or names.
-List<Chat> chatLists = [
-  Chat(
-      name: "Saurabh",
-      avatar: "assets/images/avatar1.png",
-      messages: ["Message 1", "Message 2"]),
-  Chat(
-      name: "ThePresence flutter",
-      avatar: "assets/images/tony.jpg",
-      messages: ["Message 3", "Message 4"]),
-  // Add more chat entries as needed
-];
+// List<Chat> chatLists = [
+//   Chat(
+//       name: "Saurabh",
+//       avatar: "assets/images/avatar1.png",
+//       messages: ["Message 1", "Message 2"]),
+//   Chat(
+//       name: "ThePresence flutter",
+//       avatar: "assets/images/tony.jpg",
+//       messages: ["Message 3", "Message 4"]),
+//   // Add more chat entries as needed
+// ];
 
-//Random List of Name and Age.
-List<Map<String, dynamic>> nameAndAge = [
-  {'name': 'https://picsum.photos/200/300?grayscale', 'age': 'casda'},
-  {'name': 'Shreyansh', 'age': '23'},
-  {'name': 'Saorabh', 'age': 22},
-  {'name': 'Ajay', 'age': 22},
-  {'name': 'Ajay', 'age': 22},
-  {'name': 'Ajay', 'age': 22},
-  {'name': 'Ajay', 'age': 22},
-  {'name': 'Ajay', 'age': 22},
-  {'name': 'Ajay', 'age': 22},
-  {'name': 'Ajay', 'age': 22},
-  {'name': 'Ajay', 'age': 22},
-  {'name': 'Ajay', 'age': 22},
-  {'name': 'Ajay', 'age': 22},
-  {'name': 'Ajay', 'age': 22},
-  {'name': 'Ajay', 'age': 22},
-  {'name': 'Ajay', 'age': 22},
-  {'name': 'Ajay', 'age': 22},
-  {'name': 'Ajay', 'age': 22},
-];
+// //Random List of Name and Age.
+// List<Map<String, dynamic>> nameAndAge = [
+//   {'name': 'https://picsum.photos/200/300?grayscale', 'age': 'casda'},
+//   {'name': 'Shreyansh', 'age': '23'},
+//   {'name': 'Saorabh', 'age': 22},
+//   {'name': 'Ajay', 'age': 22},
+//   {'name': 'Ajay', 'age': 22},
+//   {'name': 'Ajay', 'age': 22},
+//   {'name': 'Ajay', 'age': 22},
+//   {'name': 'Ajay', 'age': 22},
+//   {'name': 'Ajay', 'age': 22},
+//   {'name': 'Ajay', 'age': 22},
+//   {'name': 'Ajay', 'age': 22},
+//   {'name': 'Ajay', 'age': 22},
+//   {'name': 'Ajay', 'age': 22},
+//   {'name': 'Ajay', 'age': 22},
+//   {'name': 'Ajay', 'age': 22},
+//   {'name': 'Ajay', 'age': 22},
+//   {'name': 'Ajay', 'age': 22},
+//   {'name': 'Ajay', 'age': 22},
+// ];

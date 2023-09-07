@@ -93,21 +93,34 @@ class _ChattingPageState extends State<ChattingPage> {
       floatingActionButton: SizedBox(
         height: 50,
         width: 50,
-        child: FloatingActionButton(
-          onPressed: () {},
-          backgroundColor: Colors.teal,
-          shape: const CircleBorder(),
-          child: const Icon(
-            Icons.mic,
-            color: Colors.white,
-          ),
+        child: Stack(
+          children: [
+            FloatingActionButton(
+              onPressed: () {},
+              backgroundColor: Colors.teal,
+              shape: const CircleBorder(),
+              child: const Icon(
+                Icons.send,
+                color: Colors.white,
+              ),
+            ),
+            FloatingActionButton(
+              onPressed: () {},
+              backgroundColor: Colors.teal,
+              shape: const CircleBorder(),
+              child: const Icon(
+                Icons.mic,
+                color: Colors.white,
+              ),
+            ),
+          ],
         ),
       ),
       body: Column(
         children: [
           Expanded(
             child: ListView.builder(
-              itemCount: chats.length,
+              itemCount: chatList.length,
               itemBuilder: (BuildContext context, int index) {
                 return Align(
                   alignment: Alignment.topRight,
@@ -128,7 +141,7 @@ class _ChattingPageState extends State<ChattingPage> {
                           children: [
                             Expanded(
                               child: Text(
-                                chats[index]['message'],
+                                chatList[index]['message'].toString(),
                                 style: const TextStyle(
                                   fontSize: 16,
                                 ),
@@ -139,10 +152,10 @@ class _ChattingPageState extends State<ChattingPage> {
                               child: Padding(
                                 padding:
                                     const EdgeInsets.only(top: 10, left: 10),
-                                child: Text(
-                                  chats[index]['time'],
-                                  // style: const TextStyle(fontSize: 18),
-                                ),
+                                child: Text(chatList[index]['time'].toString()
+                                    // [index]['time'].toString(),
+                                    // style: const TextStyle(fontSize: 18),
+                                    ),
                               ),
                             ),
                           ],
@@ -189,7 +202,7 @@ class _ChattingPageState extends State<ChattingPage> {
                 //   log(textController.text, name: 'onEditingComplete');
                 // },
                 onSubmitted: (value) {
-                  chats.add({
+                  chatList.add({
                     'message': value,
                     'time':
                         '  ${TimeOfDay.now().hour.toString()}:${TimeOfDay.now().minute}'
