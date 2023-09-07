@@ -109,12 +109,9 @@ class ChatTabBarScreen extends StatelessWidget {
               chatList[index]['name'],
               style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 17),
             ),
-            subtitle: Padding(
-              padding: const EdgeInsets.only(left: 0),
-              child: Text(
-                userMessageList[index],
-                maxLines: 1,
-              ),
+            subtitle: Text(
+              userMessageList[index],
+              maxLines: 1,
             ),
             trailing: const Text("Yesterday"),
           );

@@ -1,6 +1,7 @@
 //Drawer list (images links)
 
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/screens/chatting_screen.dart';
 
 List<Map<String, dynamic>> myList = [
   {
@@ -103,8 +104,6 @@ List<String> landingImages = [
   "assets/images/mobile.jpg",
 ];
 
-//List of WhatsApp chat images or names
-
 List<Map<String, dynamic>> chatList = [
   {"avatar": "assets/images/avatar1.png", "name": "Saurabh"},
   {"avatar": "assets/images/tony.jpg", "name": "ThePresence flutter "},
@@ -119,6 +118,7 @@ List<Map<String, dynamic>> chatList = [
   {"avatar": "assets/images/avatar3.jpg", "name": "Raj Kr"},
   {"avatar": "assets/images/avatar3.jpg", "name": "Kumar"},
 ];
+
 //*****************USer Message List******************/
 List<String> userMessageList = [
   "hey! Good Morning",
@@ -303,7 +303,35 @@ List<Map<String, IconData>> contactIconList = [
   }
 ];
 
-//Random list
+//***********************************Chatting Screen*******************************************//
+
+List<Map<String, dynamic>> chats = [
+  {'message': 'Hello !!', 'time': '  12:00'},
+  {'message': 'How are you', 'time': '  05:05'},
+  {'message': 'I am fine.', 'time': '  08:25'},
+  {'message': 'What about you', 'time': '  06:10'},
+];
+List<Map<String, dynamic>> chat = [
+  {'message': 'Hello !!', 'time': TimeOfDay.now().hour.toString()},
+  {'message': 'How are you', 'time': TimeOfDay.now().hour.toString()},
+  {'message': 'I am fine.', 'time': TimeOfDay.now().hour.toString()},
+  {'message': 'What about you.', 'time': TimeOfDay.now().hour.toString()},
+];
+
+//List of WhatsApp chat images or names.
+List<Chat> chatLists = [
+  Chat(
+      name: "Saurabh",
+      avatar: "assets/images/avatar1.png",
+      messages: ["Message 1", "Message 2"]),
+  Chat(
+      name: "ThePresence flutter",
+      avatar: "assets/images/tony.jpg",
+      messages: ["Message 3", "Message 4"]),
+  // Add more chat entries as needed
+];
+
+//Random List of Name and Age.
 List<Map<String, dynamic>> nameAndAge = [
   {'name': 'https://picsum.photos/200/300?grayscale', 'age': 'casda'},
   {'name': 'Shreyansh', 'age': '23'},
