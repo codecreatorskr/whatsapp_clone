@@ -35,7 +35,9 @@ class ChatTabBarScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const ChattingPage(),
+                  builder: (context) => ChattingPage(
+                    index: index,
+                  ),
                 ),
               );
             },
