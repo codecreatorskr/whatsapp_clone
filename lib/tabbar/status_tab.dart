@@ -63,93 +63,95 @@ class StatusBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        ListTile(
-          leading: Stack(
-            children: [
-              const CircleAvatar(
-                backgroundColor: Colors.white,
-                backgroundImage: AssetImage('assets/images/dp.webp'),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 22, top: 18),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    color: Colors.white,
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          ListTile(
+            leading: Stack(
+              children: [
+                const CircleAvatar(
+                  backgroundColor: Colors.white,
+                  backgroundImage: AssetImage('assets/images/dp.webp'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 22, top: 18),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),
+                      color: Colors.white,
+                    ),
+                    child: const Icon(
+                      Icons.add_circle,
+                      color: Colors.teal,
+                    ),
                   ),
-                  child: const Icon(
-                    Icons.add_circle,
-                    color: Colors.teal,
+                ),
+              ],
+            ),
+            title: const Text(
+              "My Status",
+              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+            ),
+            subtitle: const Text("Tap to add status update"),
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 22, vertical: 5),
+            child: Text("Recent updates"),
+          ),
+
+          // recent Icon(icon)
+          ListView.builder(
+            shrinkWrap: true,
+            itemCount: 3,
+            itemBuilder: (context, index) {
+              return ListTile(
+                iconColor: Colors.white,
+                leading: CircleAvatar(
+                  backgroundImage: AssetImage(
+                    chatList[index]['avatar'],
                   ),
                 ),
-              ),
-            ],
-          ),
-          title: const Text(
-            "My Status",
-            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-          ),
-          subtitle: const Text("Tap to add status update"),
-        ),
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 22, vertical: 5),
-          child: Text("Recent updates"),
-        ),
-
-        // recent Icon(icon)
-        ListView.builder(
-          shrinkWrap: true,
-          itemCount: 3,
-          itemBuilder: (context, index) {
-            return ListTile(
-              iconColor: Colors.white,
-              leading: CircleAvatar(
-                backgroundImage: AssetImage(
-                  chatList[index]['avatar'],
+                title: Text(
+                  chatList[index]['name'],
+                  style: const TextStyle(
+                      fontWeight: FontWeight.w500, fontSize: 18),
                 ),
-              ),
-              title: Text(
-                chatList[index]['name'],
-                style:
-                    const TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-              ),
-              subtitle: Text(
-                chatListSubtitle[index]['time'],
-              ),
-            );
-          },
-        ),
-        const Padding(
-          padding: EdgeInsets.only(top: 20, left: 22),
-          child: Text('Viewed updates'),
-        ),
-
-        ListView.builder(
-          shrinkWrap: true,
-          itemCount: 2,
-          itemBuilder: (context, index) {
-            return ListTile(
-              iconColor: Colors.white,
-              leading: CircleAvatar(
-                backgroundImage: AssetImage(
-                  chatList[index]['avatar'],
+                subtitle: Text(
+                  chatListSubtitle[index]['time'],
                 ),
-              ),
-              title: Text(
-                chatList[index]['name'],
-                style:
-                    const TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-              ),
-              subtitle: Text(
-                chatListSubtitle[index]['time'],
-              ),
-            );
-          },
-        ),
-      ],
+              );
+            },
+          ),
+          const Padding(
+            padding: EdgeInsets.only(top: 20, left: 22),
+            child: Text('Viewed updates'),
+          ),
+
+          ListView.builder(
+            shrinkWrap: true,
+            itemCount: 2,
+            itemBuilder: (context, index) {
+              return ListTile(
+                iconColor: Colors.white,
+                leading: CircleAvatar(
+                  backgroundImage: AssetImage(
+                    chatList[index]['avatar'],
+                  ),
+                ),
+                title: Text(
+                  chatList[index]['name'],
+                  style: const TextStyle(
+                      fontWeight: FontWeight.w500, fontSize: 18),
+                ),
+                subtitle: Text(
+                  chatListSubtitle[index]['time'],
+                ),
+              );
+            },
+          ),
+        ],
+      ),
     );
   }
 }

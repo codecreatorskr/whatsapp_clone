@@ -1,7 +1,6 @@
 //Drawer list (images links)
 
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/screens/chatting_screen.dart';
 
 List<Map<String, dynamic>> myList = [
   {

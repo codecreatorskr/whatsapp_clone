@@ -1,23 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/utils/database.dart';
 
-class Chat {
-  final String name;
-  final String avatar;
-  final List<String> messages;
+// class Chat {
+//   final String name;
+//   final String avatar;
+//   final List<String> messages;
 
-  Chat({required this.name, required this.avatar, required this.messages});
-}
+//   Chat({required this.name, required this.avatar, required this.messages});
+// }
 
 class ChattingPage extends StatefulWidget {
-  // final ChattingPage chat;
   final int index;
 
   const ChattingPage({
     super.key,
     required this.index,
-    // required Map<String, dynamic> chat,
-    // required this.chat,
   });
 
   @override
@@ -26,6 +23,20 @@ class ChattingPage extends StatefulWidget {
 
 class _ChattingPageState extends State<ChattingPage> {
   final textController = TextEditingController();
+  bool send = false;
+
+  @override
+  void initState() {
+    super.initState();
+    textController.addListener(() {
+      if (textController.text.isNotEmpty) {
+        send = true;
+      } else {
+        send = false;
+      }
+      setState(() {});
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -94,25 +105,36 @@ class _ChattingPageState extends State<ChattingPage> {
         height: 50,
         width: 50,
         child: Stack(
+          clipBehavior: Clip.none,
           children: [
-            FloatingActionButton(
-              onPressed: () {},
-              backgroundColor: Colors.teal,
-              shape: const CircleBorder(),
-              child: const Icon(
-                Icons.send,
-                color: Colors.white,
-              ),
-            ),
-            FloatingActionButton(
-              onPressed: () {},
-              backgroundColor: Colors.teal,
-              shape: const CircleBorder(),
-              child: const Icon(
-                Icons.mic,
-                color: Colors.white,
-              ),
-            ),
+            send
+                ? Positioned(
+                    left: 8,
+                    top: 6,
+                    child: FloatingActionButton(
+                      heroTag: null,
+                      onPressed: () {},
+                      backgroundColor: Colors.teal,
+                      shape: const CircleBorder(),
+                      child: const Icon(
+                        Icons.send,
+                        color: Colors.white,
+                      ),
+                    ),
+                  )
+                : Positioned(
+                    top: 6,
+                    left: 8,
+                    child: FloatingActionButton(
+                      onPressed: () {},
+                      backgroundColor: Colors.teal,
+                      shape: const CircleBorder(),
+                      child: const Icon(
+                        Icons.mic,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
           ],
         ),
       ),
@@ -167,31 +189,13 @@ class _ChattingPageState extends State<ChattingPage> {
               },
             ),
           ),
-          // const Expanded(
-          //   child: SizedBox(),
-          // ),
-          // Row(
-          //   mainAxisAlignment: MainAxisAlignment.end,
-          //   children: [
-          //     CircleAvatar(
-          //       backgroundColor: Colors.teal,
-          //       child: IconButton(
-          //         onPressed: () {},
-          //         icon: Icon(
-          //           Icons.mic,
-          //           color: Colors.white,
-          //         ),
-          //       ),
-          //     )
-          //   ],
-          // ),
           Align(
             alignment: Alignment.bottomLeft,
             child: Padding(
               padding: const EdgeInsets.only(
-                right: 72,
+                right: 65,
                 left: 5,
-                bottom: 18,
+                bottom: 7,
               ),
               child: TextField(
                 controller: textController,
@@ -202,11 +206,13 @@ class _ChattingPageState extends State<ChattingPage> {
                 //   log(textController.text, name: 'onEditingComplete');
                 // },
                 onSubmitted: (value) {
-                  chatList.add({
-                    'message': value,
-                    'time':
-                        '  ${TimeOfDay.now().hour.toString()}:${TimeOfDay.now().minute}'
-                  });
+                  if (textController.text.isNotEmpty) {
+                    chatList.add({
+                      'message': value,
+                      'time':
+                          '  ${TimeOfDay.now().hour.toString()}:${TimeOfDay.now().minute}'
+                    });
+                  }
                   textController.clear();
                   setState(() {});
                 },
