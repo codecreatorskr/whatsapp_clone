@@ -24,6 +24,7 @@ class ChattingPage extends StatefulWidget {
 class _ChattingPageState extends State<ChattingPage> {
   final textController = TextEditingController();
   bool send = false;
+  bool icon = false;
 
   @override
   void initState() {
@@ -33,6 +34,14 @@ class _ChattingPageState extends State<ChattingPage> {
         send = true;
       } else {
         send = false;
+      }
+      setState(() {});
+    });
+    textController.addListener(() {
+      if (textController.text.isNotEmpty) {
+        icon = true;
+      } else {
+        icon = false;
       }
       setState(() {});
     });
@@ -238,15 +247,17 @@ class _ChattingPageState extends State<ChattingPage> {
                         onPressed: () {},
                         icon: const Icon(Icons.attach_file_outlined),
                       ),
-                      IconButton(
-                        // color: Colors.grey,
-                        onPressed: () {},
-                        icon: const Icon(Icons.currency_rupee),
-                      ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: const Icon(Icons.camera_alt_rounded),
-                      ),
+                      if (!icon)
+                        IconButton(
+                          // color: Colors.grey,
+                          onPressed: () {},
+                          icon: const Icon(Icons.currency_rupee),
+                        ),
+                      if (!icon)
+                        IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Icons.camera_alt_rounded),
+                        ),
                     ],
                   ),
                 ),
