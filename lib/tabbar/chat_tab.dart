@@ -28,6 +28,7 @@ class ChatTabBarScreen extends StatelessWidget {
       ),
 
       body: ListView.builder(
+        // physics: NeverScrollableScrollPhysics(),
         itemCount: chatList.length,
         itemBuilder: (BuildContext context, int index) {
           return ListTile(
@@ -103,7 +104,7 @@ class ChatTabBarScreen extends StatelessWidget {
               },
               child: CircleAvatar(
                 backgroundImage: AssetImage(
-                  chatList[index]['avatar'],
+                  chatList[index]['avatar'].toString(),
                 ),
               ),
             ),

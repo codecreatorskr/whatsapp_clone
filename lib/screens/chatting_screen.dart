@@ -1,13 +1,9 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/utils/database.dart';
 
-// class Chat {
-//   final String name;
-//   final String avatar;
-//   final List<String> messages;
 
-//   Chat({required this.name, required this.avatar, required this.messages});
-// }
 
 class ChattingPage extends StatefulWidget {
   final int index;
@@ -29,6 +25,7 @@ class _ChattingPageState extends State<ChattingPage> {
   @override
   void initState() {
     super.initState();
+    //send or mic button
     textController.addListener(() {
       if (textController.text.isNotEmpty) {
         send = true;
@@ -37,6 +34,8 @@ class _ChattingPageState extends State<ChattingPage> {
       }
       setState(() {});
     });
+
+    //textfield icons 
     textController.addListener(() {
       if (textController.text.isNotEmpty) {
         icon = true;
@@ -135,7 +134,9 @@ class _ChattingPageState extends State<ChattingPage> {
                     top: 6,
                     left: 8,
                     child: FloatingActionButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        log('dfasfadsfasfdsf');
+                      },
                       backgroundColor: Colors.teal,
                       shape: const CircleBorder(),
                       child: const Icon(
@@ -151,7 +152,7 @@ class _ChattingPageState extends State<ChattingPage> {
         children: [
           Expanded(
             child: ListView.builder(
-              itemCount: chatList.length,
+              itemCount: chatList[widget.index]['messages'].length,
               itemBuilder: (BuildContext context, int index) {
                 return Align(
                   alignment: Alignment.topRight,
@@ -170,23 +171,23 @@ class _ChattingPageState extends State<ChattingPage> {
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Expanded(
+                            ConstrainedBox(
+                              constraints: const BoxConstraints(
+                                maxWidth: 200,
+                              ),
                               child: Text(
-                                chatList[index]['message'].toString(),
+                                chatList[widget.index]['messages'][index]
+                                    ['message'],
                                 style: const TextStyle(
                                   fontSize: 16,
                                 ),
                               ),
                             ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 10, left: 10),
-                                child: Text(chatList[index]['time'].toString()
-                                    // [index]['time'].toString(),
-                                    // style: const TextStyle(fontSize: 18),
-                                    ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 12, left: 10),
+                              child: Text(
+                                chatList[widget.index]['messages'][index]
+                                    ['time'],
                               ),
                             ),
                           ],
@@ -207,6 +208,7 @@ class _ChattingPageState extends State<ChattingPage> {
                 bottom: 7,
               ),
               child: TextField(
+                textInputAction: TextInputAction.done,
                 controller: textController,
                 // onChanged: (value) {
                 //   log(value, name: 'onChanged');
@@ -216,7 +218,7 @@ class _ChattingPageState extends State<ChattingPage> {
                 // },
                 onSubmitted: (value) {
                   if (textController.text.isNotEmpty) {
-                    chatList.add({
+                    chatList[widget.index]['messages'].add({
                       'message': value,
                       'time':
                           '  ${TimeOfDay.now().hour.toString()}:${TimeOfDay.now().minute}'

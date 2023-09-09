@@ -122,11 +122,10 @@ List<Map<String, dynamic>> chatList = [
       {'message': 'How are you', 'time': '05:05'},
       {'message': 'I am fine.', 'time': '08:25'},
       {'message': 'What about you', 'time': '06:10'},
-      // {'message': 'What about you', 'time': '06:10'},
     ]
   },
   {
-    "avatar": "assets/images/dp3bg.jpg",
+    "avatar": "assets/images/avatar3.jpg",
     "name": "Ajay Kr",
     'messages': [
       {'message': 'Hello !!', 'time': '12:00'},
@@ -156,7 +155,7 @@ List<Map<String, dynamic>> chatList = [
     ]
   },
   {
-    "avatar": "assets/images/dp2.jpg",
+    "avatar": "assets/images/avatar5.png",
     "name": "Rajnish",
     'messages': [
       {'message': 'Hello !!', 'time': '12:00'},
@@ -284,7 +283,7 @@ List<String> userMessageList = [
   "Message Description 2",
 ];
 List<Map<String, dynamic>> chatListSubtitle = [
-  {"message": "Message Description", 'time': " Today, 00:00"},
+  {"message": "Message Description", 'time': " Today, 00:00",'subtitle':''},
   {"message": "Your new message has been arrived", 'time': " Today, 12:00"},
   {"message": "Message Description 1", 'time': " Today,04:00"},
   {"message": "Message Description 2", 'time': " Today, 09:00"},
@@ -439,24 +438,3 @@ List<Map<String, IconData>> contactIconList = [
 //   // Add more chat entries as needed
 // ];
 
-// //Random List of Name and Age.
-// List<Map<String, dynamic>> nameAndAge = [
-//   {'name': 'https://picsum.photos/200/300?grayscale', 'age': 'casda'},
-//   {'name': 'Shreyansh', 'age': '23'},
-//   {'name': 'Saorabh', 'age': 22},
-//   {'name': 'Ajay', 'age': 22},
-//   {'name': 'Ajay', 'age': 22},
-//   {'name': 'Ajay', 'age': 22},
-//   {'name': 'Ajay', 'age': 22},
-//   {'name': 'Ajay', 'age': 22},
-//   {'name': 'Ajay', 'age': 22},
-//   {'name': 'Ajay', 'age': 22},
-//   {'name': 'Ajay', 'age': 22},
-//   {'name': 'Ajay', 'age': 22},
-//   {'name': 'Ajay', 'age': 22},
-//   {'name': 'Ajay', 'age': 22},
-//   {'name': 'Ajay', 'age': 22},
-//   {'name': 'Ajay', 'age': 22},
-//   {'name': 'Ajay', 'age': 22},
-//   {'name': 'Ajay', 'age': 22},
-// ];
