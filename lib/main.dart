@@ -21,7 +21,9 @@ class MyApp extends StatelessWidget {
           iconTheme: IconThemeData(color: Colors.white),
         ),
       ),
-      home: const WhatsAppLandingScreen(),
+      home: const Scaffold(
+        body: WhatsAppLandingScreen(),
+      ),
     );
   }
 }

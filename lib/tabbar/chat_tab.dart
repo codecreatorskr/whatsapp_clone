@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/screens/chatbox_contact_screen.dart';
-import 'package:whatsapp_clone/screens/chatting_sccreen.dart';
-import 'package:whatsapp_clone/utils/url_list.dart';
+import 'package:whatsapp_clone/screens/select_contact_screen.dart';
+import 'package:whatsapp_clone/screens/chatting_screen.dart';
+import 'package:whatsapp_clone/utils/database.dart';
 
 class ChatTabBarScreen extends StatelessWidget {
   const ChatTabBarScreen({
@@ -28,6 +28,7 @@ class ChatTabBarScreen extends StatelessWidget {
       ),
 
       body: ListView.builder(
+        // physics: NeverScrollableScrollPhysics(),
         itemCount: chatList.length,
         itemBuilder: (BuildContext context, int index) {
           return ListTile(
@@ -35,7 +36,9 @@ class ChatTabBarScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const ChattingPage(),
+                  builder: (context) => ChattingPage(
+                    index: index,
+                  ),
                 ),
               );
             },
@@ -101,7 +104,7 @@ class ChatTabBarScreen extends StatelessWidget {
               },
               child: CircleAvatar(
                 backgroundImage: AssetImage(
-                  chatList[index]['avatar'],
+                  chatList[index]['avatar'].toString(),
                 ),
               ),
             ),
@@ -109,9 +112,9 @@ class ChatTabBarScreen extends StatelessWidget {
               chatList[index]['name'],
               style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 17),
             ),
-            subtitle: Padding(
-              padding: const EdgeInsets.only(left: 0),
-              child: Text(chatListSubtitle[index]['Message'].toString()),
+            subtitle: Text(
+              userMessageList[index],
+              maxLines: 1,
             ),
             trailing: const Text("Yesterday"),
           );

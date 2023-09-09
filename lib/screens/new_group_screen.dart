@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/utils/url_list.dart';
+import 'package:whatsapp_clone/utils/database.dart';
 
 class NewGroupScreen extends StatelessWidget {
   const NewGroupScreen({super.key});
