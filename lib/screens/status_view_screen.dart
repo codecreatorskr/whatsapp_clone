@@ -14,8 +14,12 @@ class _StatusViewscreenState extends State<StatusViewscreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 2)).then(
-      (value) => Navigator.pop(context),
+    Future.delayed(const Duration(seconds: 5)).then(
+      (value) {
+        if (mounted) {
+          Navigator.pop(context);
+        }
+      },
     );
   }
 
