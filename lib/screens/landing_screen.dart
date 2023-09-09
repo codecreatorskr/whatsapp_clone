@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/screens/menu_dialod.dart';
+import 'package:whatsapp_clone/screens/menu_popup.dart';
 import 'package:whatsapp_clone/tabbar/calls_tab.dart';
 import 'package:whatsapp_clone/tabbar/chat_tab.dart';
 import 'package:whatsapp_clone/tabbar/community_tab.dart';
@@ -24,27 +24,15 @@ class WhatsAppLandingScreen extends StatelessWidget {
                     TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
               ),
             ),
-            actions: [
-              const Icon(
+            actions: const [
+              Icon(
                 Icons.camera_alt_outlined,
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.only(left: 20),
                 child: Icon(Icons.search),
               ),
-              IconButton(
-                onPressed: () {
-                  showDialog(
-                    // barrierColor: Colors.amber,
-                    context: context,
-                    builder: (context) => const Padding(
-                      padding: EdgeInsets.only(left: 150, bottom: 400),
-                      child: MenuDialog(),
-                    ),
-                  );
-                },
-                icon: const Icon(Icons.more_vert),
-              ),
+              PopUpMenu(),
             ],
           ),
           const SliverAppBar(
@@ -57,7 +45,7 @@ class WhatsAppLandingScreen extends StatelessWidget {
               indicatorSize: TabBarIndicatorSize.tab,
               indicatorWeight: 4,
               labelStyle: TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
-              padding: EdgeInsets.only(right: 10, top: 0),
+              padding: EdgeInsets.only(right: 15, top: 0),
               tabs: [
                 Icon(
                   Icons.groups,
@@ -89,6 +77,8 @@ class WhatsAppLandingScreen extends StatelessWidget {
     );
   }
 }
+
+
   // appBar: AppBar(
   //   backgroundColor: Colors.teal,
   //   title: Title(
@@ -128,7 +118,7 @@ class WhatsAppLandingScreen extends StatelessWidget {
   //       indicatorSize: TabBarIndicatorSize.tab,
   //       indicatorWeight: 4,
   //       labelStyle: TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
-  //       padding: EdgeInsets.only(right: 10),
+  //       padding: EdgeInsets.only(right: 15),
   //       tabs: [
   //         Row(
   //           mainAxisAlignment: MainAxisAlignment.center,

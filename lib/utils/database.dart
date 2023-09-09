@@ -283,7 +283,7 @@ List<String> userMessageList = [
   "Message Description 2",
 ];
 List<Map<String, dynamic>> chatListSubtitle = [
-  {"message": "Message Description", 'time': " Today, 00:00",'subtitle':''},
+  {"message": "Message Description", 'time': " Today, 00:00", 'subtitle': ''},
   {"message": "Your new message has been arrived", 'time': " Today, 12:00"},
   {"message": "Message Description 1", 'time': " Today,04:00"},
   {"message": "Message Description 2", 'time': " Today, 09:00"},
@@ -398,16 +398,41 @@ List<String> callssubtitle = [
 ];
 
 //*************Icons_List*******************/
-List<Map<String, IconData>> contactIconList = [
+List<Map<String, IconData>> settingIconList = [
   {
-    'icons': Icons.group,
+    'icons': Icons.key,
   },
   {
-    'icons': Icons.group_add,
+    'icons': Icons.lock,
   },
   {
-    'icons': Icons.groups,
-  }
+    'icons': Icons.emoji_emotions,
+  },
+  {
+    'icons': Icons.chat,
+  },
+  {
+    'icons': Icons.notifications,
+  },
+  {
+    'icons': Icons.data_usage,
+  },
+  {
+    'icons': Icons.language,
+  },
+  {
+    'icons': Icons.help_outline_sharp,
+  },
+];
+List<Map<String, dynamic>> setingScreenTitleSubtitle = [
+  {'title': 'Account', 'subtitle': 'Security notification, change number'},
+  {'title': 'Privacy', 'subtitle': 'Block contacts, disappearing message'},
+  {'title': 'Avatar', 'subtitle': 'Create, edit, profile photo'},
+  {'title': 'Chats', 'subtitle': 'Theme, walpapers,char history'},
+  {'title': 'Notification', 'subtitle': 'Message, group & call tones'},
+  {'title': 'Storage and data', 'subtitle': 'Network usage, auto-download'},
+  {'title': 'App language', 'subtitle': "English(device's language)"},
+  {'title': '', 'subtitle': 'Help center, contact us privacy policy'},
 ];
 
 //***********************************Chatting Screen*******************************************//
@@ -437,4 +462,3 @@ List<Map<String, IconData>> contactIconList = [
 //       messages: ["Message 3", "Message 4"]),
 //   // Add more chat entries as needed
 // ];
-
