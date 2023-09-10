@@ -2,7 +2,8 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/screens/edit_stauts_screen.dart';
-import 'package:whatsapp_clone/screens/status_view_screen.dart';
+import 'package:whatsapp_clone/screens/recent_status_view_screen.dart';
+import 'package:whatsapp_clone/screens/viewed_update_screen.dart';
 import 'package:whatsapp_clone/utils/database.dart';
 
 class StatusTabBar extends StatelessWidget {
@@ -111,10 +112,12 @@ class StatusBody extends StatelessWidget {
                 iconColor: Colors.white,
                 onTap: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => StatusViewscreen(index: index),
-                      ));
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          RecentStatusViewscreen(index: index),
+                    ),
+                  );
                 },
                 leading: CircleAvatar(
                   backgroundImage: AssetImage(
@@ -143,6 +146,14 @@ class StatusBody extends StatelessWidget {
             itemCount: 5,
             itemBuilder: (context, index) {
               return ListTile(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => StatusViewscreen(index: index),
+                    ),
+                  );
+                },
                 iconColor: Colors.white,
                 leading: CircleAvatar(
                   backgroundImage: AssetImage(

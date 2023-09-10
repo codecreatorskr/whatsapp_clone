@@ -39,7 +39,7 @@ class MenuSettingScreen extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               ),
             ),
-            subtitle: Text('🚩'),
+            subtitle: Text('Available'),
             trailing: Icon(
               Icons.qr_code,
               color: Colors.teal,
