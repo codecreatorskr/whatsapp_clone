@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/screens/menu_setting_screen.dart';
+import 'package:whatsapp_clone/screens/setting_screen.dart';
 
 class PopUpMenu extends StatelessWidget {
   const PopUpMenu({
@@ -33,7 +33,7 @@ class PopUpMenu extends StatelessWidget {
           ),
         ),
         const PopupMenuItem(
-          child: const Padding(
+          child:  Padding(
             padding: EdgeInsets.only(top: 17),
             child: Text(
               "Starred message",
@@ -76,7 +76,9 @@ class PopUpMenu extends StatelessWidget {
       ],
     );
   }
-}// import 'package:flutter/material.dart';
+}
+
+// import 'package:flutter/material.dart';
 
 // class MenuDialog extends StatelessWidget {
 //   ,const MenuDialog({

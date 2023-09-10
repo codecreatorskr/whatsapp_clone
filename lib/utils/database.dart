@@ -423,6 +423,9 @@ List<Map<String, IconData>> settingIconList = [
   {
     'icons': Icons.help_outline_sharp,
   },
+  {
+    'icons': Icons.group,
+  },
 ];
 List<Map<String, dynamic>> setingScreenTitleSubtitle = [
   {'title': 'Account', 'subtitle': 'Security notification, change number'},
@@ -432,7 +435,8 @@ List<Map<String, dynamic>> setingScreenTitleSubtitle = [
   {'title': 'Notification', 'subtitle': 'Message, group & call tones'},
   {'title': 'Storage and data', 'subtitle': 'Network usage, auto-download'},
   {'title': 'App language', 'subtitle': "English(device's language)"},
-  {'title': '', 'subtitle': 'Help center, contact us privacy policy'},
+  {'title': 'Help', 'subtitle': 'Help center, contact us privacy policy'},
+  {'title': 'Invite a friend', 'subtitle': ''},
 ];
 
 //***********************************Chatting Screen*******************************************//
