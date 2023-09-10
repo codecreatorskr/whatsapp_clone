@@ -1,8 +1,12 @@
+import 'dart:developer';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/utils/routes.dart';
 
 void main() {
   runApp(const MyApp());
+  log(kIsWeb.toString());
 }
 
 class MyApp extends StatelessWidget {
@@ -31,6 +35,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "WhatsApp",
       theme: ThemeData(
+        pageTransitionsTheme: const PageTransitionsTheme(builders: {
+          TargetPlatform.android: CupertinoPageTransitionsBuilder(),
+          TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+        }),
         useMaterial3: true,
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.teal,

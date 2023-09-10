@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/screens/profile.dart';
 import 'package:whatsapp_clone/utils/database.dart';
 
 class MenuSettingScreen extends StatefulWidget {
@@ -34,21 +35,29 @@ class _MenuSettingScreenState extends State<MenuSettingScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const ListTile(
+            ListTile(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ProfileScreen(),
+                  ),
+                );
+              },
               minVerticalPadding: 24,
-              leading: CircleAvatar(
+              leading: const CircleAvatar(
                 maxRadius: 35,
                 backgroundImage: AssetImage('assets/images/dp.webp'),
               ),
-              title: Text(
+              title: const Text(
                 "Saurabh Kumar",
                 style: TextStyle(
                   fontSize: 20,
                   // fontWeight: FontWeight.w500,
                 ),
               ),
-              subtitle: Text('Available'),
-              trailing: Icon(
+              subtitle: const Text('Available'),
+              trailing: const Icon(
                 Icons.qr_code,
                 color: Colors.teal,
                 size: 30,
