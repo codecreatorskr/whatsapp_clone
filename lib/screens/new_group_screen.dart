@@ -1,8 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/utils/database.dart';
 
-class NewGroupScreen extends StatelessWidget {
+class NewGroupScreen extends StatefulWidget {
   const NewGroupScreen({super.key});
+
+  @override
+  State<NewGroupScreen> createState() => _NewGroupScreenState();
+}
+
+class _NewGroupScreenState extends State<NewGroupScreen> {
+  List<String> selectedContacts = [];
+
+  void contactSelection(String contact) {
+    setState(() {
+      if (selectedContacts.contains(contact)) {
+        selectedContacts.remove(contact);
+      } else {
+        selectedContacts.add(contact);
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +34,8 @@ class NewGroupScreen extends StatelessWidget {
       ),
       appBar: AppBar(
         title: const ListTile(
+          // onTap: () => onTap(isSelected!, index),
+
           title: Text(
             'New Group',
             style: TextStyle(

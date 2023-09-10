@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/screens/new_group_screen.dart';
 import 'package:whatsapp_clone/screens/setting_screen.dart';
 
 class PopUpMenu extends StatelessWidget {
@@ -10,11 +11,30 @@ class PopUpMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return PopupMenuButton(
       itemBuilder: (context) => [
-        const PopupMenuItem(
-          child: Padding(
+        PopupMenuItem(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const NewGroupScreen(),
+              ),
+            );
+          },
+          child: const Padding(
             padding: EdgeInsets.only(top: 2),
             child: Text(
               "New group",
+              style: TextStyle(
+                fontSize: 17,
+              ),
+            ),
+          ),
+        ),
+        const PopupMenuItem(
+          child: Padding(
+            padding: EdgeInsets.only(top: 17),
+            child: Text(
+              "New broadcast",
               style: TextStyle(
                 fontSize: 17,
               ),
@@ -33,7 +53,7 @@ class PopUpMenu extends StatelessWidget {
           ),
         ),
         const PopupMenuItem(
-          child:  Padding(
+          child: Padding(
             padding: EdgeInsets.only(top: 17),
             child: Text(
               "Starred message",

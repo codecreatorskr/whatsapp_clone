@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/utils/database.dart';
 
-class MenuSettingScreen extends StatelessWidget {
+class MenuSettingScreen extends StatefulWidget {
   const MenuSettingScreen({super.key});
 
+  @override
+  State<MenuSettingScreen> createState() => _MenuSettingScreenState();
+}
+
+class _MenuSettingScreenState extends State<MenuSettingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,10 +80,23 @@ class MenuSettingScreen extends StatelessWidget {
                 );
               },
             ),
+            const ListTile(
+              contentPadding: EdgeInsets.only(left: 25),
+              leading: Icon(
+                Icons.group,
+                color: Color.fromARGB(255, 119, 116, 116),
+              ),
+              title: Text(
+                'Invite a friend',
+                style: TextStyle(
+                  fontSize: 18,
+                ),
+              ),
+            ),
             const Padding(
-              padding: EdgeInsets.only(top: 10, bottom: 3),
+              padding: EdgeInsets.only(top: 15, bottom: 3, left: 8),
               child: Text(
-                '  from',
+                'from',
                 style: TextStyle(
                   fontSize: 16,
                 ),

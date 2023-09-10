@@ -118,7 +118,7 @@ List<Map<String, dynamic>> chatList = [
     "avatar": "assets/images/tony.jpg",
     "name": "Suraj",
     'messages': [
-      {'message': 'Hello surajs!!', 'time': '12:00'},
+      {'message': 'Hello Suraj!!', 'time': '12:00'},
       {'message': 'How are you', 'time': '05:05'},
       {'message': 'I am fine.', 'time': '08:25'},
       {'message': 'What about you', 'time': '06:10'},
@@ -128,7 +128,7 @@ List<Map<String, dynamic>> chatList = [
     "avatar": "assets/images/avatar3.jpg",
     "name": "Ajay Kr",
     'messages': [
-      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'Hello Ajay!!', 'time': '12:00'},
       {'message': 'How are you', 'time': '05:05'},
       {'message': 'I am fine.', 'time': '08:25'},
       {'message': 'What about you', 'time': '06:10'},
@@ -138,7 +138,7 @@ List<Map<String, dynamic>> chatList = [
     "avatar": "assets/images/dp girl 6.jpeg",
     "name": " Anaya ",
     'messages': [
-      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'Hello Anaya !!', 'time': '12:00'},
       {'message': 'How are you', 'time': '05:05'},
       {'message': 'I am fine.', 'time': '08:25'},
       {'message': 'What about you', 'time': '06:10'},
@@ -148,7 +148,7 @@ List<Map<String, dynamic>> chatList = [
     "avatar": "assets/images/images123.jpg",
     "name": "Rimjhim ",
     'messages': [
-      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'Hello Rimjhim!!', 'time': '12:00'},
       {'message': 'How are you', 'time': '05:05'},
       {'message': 'I am fine.', 'time': '08:25'},
       {'message': 'What about you', 'time': '06:10'},
@@ -158,7 +158,7 @@ List<Map<String, dynamic>> chatList = [
     "avatar": "assets/images/avatar5.png",
     "name": "Rajnish",
     'messages': [
-      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'Hello Rajnish!!', 'time': '12:00'},
       {'message': 'How are you', 'time': '05:05'},
       {'message': 'I am fine.', 'time': '08:25'},
       {'message': 'What about you', 'time': '06:10'},
@@ -168,7 +168,7 @@ List<Map<String, dynamic>> chatList = [
     "avatar": "assets/images/Ironman art.jpeg",
     "name": "Sachin",
     'messages': [
-      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'Hello Sachin!!', 'time': '12:00'},
       {'message': 'How are you', 'time': '05:05'},
       {'message': 'I am fine.', 'time': '08:25'},
       {'message': 'What about you', 'time': '06:10'},
@@ -178,7 +178,7 @@ List<Map<String, dynamic>> chatList = [
     "avatar": "assets/images/dp4.jpg",
     "name": "Raj Kr",
     'messages': [
-      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'Hello Raj!!', 'time': '12:00'},
       {'message': 'How are you', 'time': '05:05'},
       {'message': 'I am fine.', 'time': '08:25'},
       {'message': 'What about you', 'time': '06:10'},
@@ -188,7 +188,7 @@ List<Map<String, dynamic>> chatList = [
     "avatar": "assets/images/dp5.jpeg",
     "name": "Ritik",
     'messages': [
-      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'Hello Ritik!!', 'time': '12:00'},
       {'message': 'How are you', 'time': '05:05'},
       {'message': 'I am fine.', 'time': '08:25'},
       {'message': 'What about you', 'time': '06:10'},
@@ -198,7 +198,7 @@ List<Map<String, dynamic>> chatList = [
     "avatar": "assets/images/avatar2.jpg",
     "name": "Mahakal",
     'messages': [
-      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'Hello Mahakal!!', 'time': '12:00'},
       {'message': 'How are you', 'time': '05:05'},
       {'message': 'I am fine.', 'time': '08:25'},
       {'message': 'What about you', 'time': '06:10'},
@@ -208,7 +208,7 @@ List<Map<String, dynamic>> chatList = [
     "avatar": "assets/images/avatar4.jpg",
     "name": "Raj Kr",
     'messages': [
-      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'Hello Rajkumar!!', 'time': '12:00'},
       {'message': 'How are you', 'time': '05:05'},
       {'message': 'I am fine.', 'time': '08:25'},
       {'message': 'What about you', 'time': '06:10'},
@@ -218,7 +218,7 @@ List<Map<String, dynamic>> chatList = [
     "avatar": "assets/images/avatar3.jpg",
     "name": "Kumar",
     'messages': [
-      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'Hello Kumar!!', 'time': '12:00'},
       {'message': 'How are you', 'time': '05:05'},
       {'message': 'I am fine.', 'time': '08:25'},
       {'message': 'What about you', 'time': '06:10'},
@@ -228,8 +228,8 @@ List<Map<String, dynamic>> chatList = [
 
 //*****************USer Message List******************/
 List<String> userMessageList = [
-  "hey! Good Morning",
-  "Inbox happiness loading...",
+  "hey! Good Morning💌",
+  "Inbox happiness loading...📥",
   "hey ! how are you",
   "Knock, knock! Who's there? Your awesome message!",
   "A message is like a smile that pops up on your screen. 😁",
@@ -423,9 +423,9 @@ List<Map<String, IconData>> settingIconList = [
   {
     'icons': Icons.help_outline_sharp,
   },
-  {
-    'icons': Icons.group,
-  },
+  // {
+  //   'icons': Icons.group,
+  // },
 ];
 List<Map<String, dynamic>> setingScreenTitleSubtitle = [
   {'title': 'Account', 'subtitle': 'Security notification, change number'},
@@ -436,33 +436,10 @@ List<Map<String, dynamic>> setingScreenTitleSubtitle = [
   {'title': 'Storage and data', 'subtitle': 'Network usage, auto-download'},
   {'title': 'App language', 'subtitle': "English(device's language)"},
   {'title': 'Help', 'subtitle': 'Help center, contact us privacy policy'},
-  {'title': 'Invite a friend', 'subtitle': ''},
+  // {'title': 'Invite a friend', 'subtitle': ''},
 ];
 
-//***********************************Chatting Screen*******************************************//
+//(Models) List of models classes.
+// List<UserModel> users = List.generate(12, (index) => UserModel);
 
-// List<Map<String, dynamic>> chats = [
-//   {'message': 'Hello !!', 'time': '  12:00 ✓✓'},
-//   {'message': 'How are you', 'time': '  05:05 ✓'},
-//   {'message': 'I am fine.', 'time': '  08:25 ✓✓'},
-//   {'message': 'What about you', 'time': '  06:10 ✓'},
-// ];
-// List<Map<String, dynamic>> chat = [
-//   {'message': 'Hello !!', 'time': TimeOfDay.now().hour.toString()},
-//   {'message': 'How are you', 'time': TimeOfDay.now().hour.toString()},
-//   {'message': 'I am fine.', 'time': TimeOfDay.now().hour.toString()},
-//   {'message': 'What about you.', 'time': TimeOfDay.now().hour.toString()},
-// ];
 
-//List of WhatsApp chat images or names.
-// List<Chat> chatLists = [
-//   Chat(
-//       name: "Saurabh",
-//       avatar: "assets/images/avatar1.png",
-//       messages: ["Message 1", "Message 2"]),
-//   Chat(
-//       name: "ThePresence flutter",
-//       avatar: "assets/images/tony.jpg",
-//       messages: ["Message 3", "Message 4"]),
-//   // Add more chat entries as needed
-// ];

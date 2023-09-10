@@ -1,9 +1,5 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/utils/database.dart';
-
-
 
 class ChattingPage extends StatefulWidget {
   final int index;
@@ -35,7 +31,7 @@ class _ChattingPageState extends State<ChattingPage> {
       setState(() {});
     });
 
-    //textfield icons 
+    //textfield icons
     textController.addListener(() {
       if (textController.text.isNotEmpty) {
         icon = true;
@@ -48,6 +44,54 @@ class _ChattingPageState extends State<ChattingPage> {
 
   @override
   Widget build(BuildContext context) {
+    var textField = TextField(
+      textInputAction: TextInputAction.done,
+      controller: textController,
+      // onChanged: (value) {
+      //   log(value, name: 'onChanged');
+      // },
+      // onEditingComplete: () {
+      //   log(textController.text, name: 'onEditingComplete');
+      // },
+      onSubmitted: (value) {
+        sendMessage();
+      },
+      decoration: InputDecoration(
+        contentPadding: EdgeInsets.zero,
+        border: const OutlineInputBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(50),
+          ),
+          borderSide: BorderSide.none,
+        ),
+        fillColor: Colors.white,
+        filled: true,
+        prefixIcon: const Icon(
+          Icons.emoji_emotions_outlined,
+        ),
+        hintText: 'Message',
+        hintStyle: const TextStyle(fontSize: 20),
+        suffixIcon: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.attach_file_outlined),
+            ),
+            if (!icon)
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.currency_rupee),
+              ),
+            if (!icon)
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.camera_alt_rounded),
+              ),
+          ],
+        ),
+      ),
+    );
     return Scaffold(
       backgroundColor: Colors.grey[350],
       appBar: AppBar(
@@ -121,7 +165,9 @@ class _ChattingPageState extends State<ChattingPage> {
                     top: 6,
                     child: FloatingActionButton(
                       heroTag: null,
-                      onPressed: () {},
+                      onPressed: () {
+                        sendMessage();
+                      },
                       backgroundColor: Colors.teal,
                       shape: const CircleBorder(),
                       child: const Icon(
@@ -134,9 +180,7 @@ class _ChattingPageState extends State<ChattingPage> {
                     top: 6,
                     left: 8,
                     child: FloatingActionButton(
-                      onPressed: () {
-                        log('dfasfadsfasfdsf');
-                      },
+                      onPressed: () {},
                       backgroundColor: Colors.teal,
                       shape: const CircleBorder(),
                       child: const Icon(
@@ -207,67 +251,24 @@ class _ChattingPageState extends State<ChattingPage> {
                 left: 5,
                 bottom: 7,
               ),
-              child: TextField(
-                textInputAction: TextInputAction.done,
-                controller: textController,
-                // onChanged: (value) {
-                //   log(value, name: 'onChanged');
-                // },
-                // onEditingComplete: () {
-                //   log(textController.text, name: 'onEditingComplete');
-                // },
-                onSubmitted: (value) {
-                  if (textController.text.isNotEmpty) {
-                    chatList[widget.index]['messages'].add({
-                      'message': value,
-                      'time':
-                          '  ${TimeOfDay.now().hour.toString()}:${TimeOfDay.now().minute}'
-                    });
-                  }
-                  textController.clear();
-                  setState(() {});
-                },
-                decoration: InputDecoration(
-                  contentPadding: EdgeInsets.zero,
-                  border: const OutlineInputBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(50),
-                    ),
-                    borderSide: BorderSide.none,
-                  ),
-                  fillColor: Colors.white,
-                  filled: true,
-                  prefixIcon: const Icon(
-                    Icons.emoji_emotions_outlined,
-                  ),
-                  hintText: 'Message',
-                  hintStyle: const TextStyle(fontSize: 20),
-                  suffixIcon: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      IconButton(
-                        onPressed: () {},
-                        icon: const Icon(Icons.attach_file_outlined),
-                      ),
-                      if (!icon)
-                        IconButton(
-                          // color: Colors.grey,
-                          onPressed: () {},
-                          icon: const Icon(Icons.currency_rupee),
-                        ),
-                      if (!icon)
-                        IconButton(
-                          onPressed: () {},
-                          icon: const Icon(Icons.camera_alt_rounded),
-                        ),
-                    ],
-                  ),
-                ),
-              ),
+              child: textField,
             ),
           ),
         ],
       ),
     );
+  }
+
+
+
+  void sendMessage() {
+    if (textController.text.isNotEmpty) {
+      chatList[widget.index]['messages'].add({
+        'message': textController.text,
+        'time': '  ${TimeOfDay.now().hour.toString()}:${TimeOfDay.now().minute}'
+      });
+    }
+    textController.clear();
+    setState(() {});
   }
 }
