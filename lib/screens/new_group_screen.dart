@@ -11,16 +11,6 @@ class NewGroupScreen extends StatefulWidget {
 class _NewGroupScreenState extends State<NewGroupScreen> {
   List<String> selectedContacts = [];
 
-  void contactSelection(String contact) {
-    setState(() {
-      if (selectedContacts.contains(contact)) {
-        selectedContacts.remove(contact);
-      } else {
-        selectedContacts.add(contact);
-      }
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,12 +24,13 @@ class _NewGroupScreenState extends State<NewGroupScreen> {
       ),
       appBar: AppBar(
         title: const ListTile(
-          // onTap: () => onTap(isSelected!, index),
-
           title: Text(
             'New Group',
             style: TextStyle(
-                fontSize: 21, color: Colors.white, fontWeight: FontWeight.w500),
+              fontSize: 21,
+              color: Colors.white,
+              fontWeight: FontWeight.w500,
+            ),
           ),
           subtitle: Text(
             'Add participants',
@@ -57,22 +48,127 @@ class _NewGroupScreenState extends State<NewGroupScreen> {
           ),
         ],
       ),
-      body: ListView.builder(
-        itemCount: nameList.length,
-        itemBuilder: (BuildContext context, int index) {
-          return ListTile(
-            leading: CircleAvatar(
-              backgroundImage: AssetImage(
-                nameList[index]['avatar'],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: List.generate(
+                  selectedContacts.length,
+                  (index) => Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Stack(
+                      children: [
+                        Column(
+                          children: [
+                            CircleAvatar(
+                              backgroundImage: AssetImage(
+                                nameList[index]['avatar'],
+                              ),
+                              radius: 27,
+                            ),
+                            Text(
+                              nameList[index]['name'],
+                            ),
+                          ],
+                        ),
+                        Positioned(
+                          right: 0,
+                          bottom: 15,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.white,
+                            ),
+                            child: GestureDetector(
+                              onTap: () {
+                                selectedContacts.removeAt(index);
+                                setState(() {});
+                              },
+                              child: const Icon(
+                                Icons.cancel,
+                                color: Color.fromARGB(255, 114, 113, 113),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
             ),
-            title: Text(
-              nameList[index]['name'],
-              style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+            ListView.builder(
+              physics: const NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: nameList.length,
+              itemBuilder: (BuildContext context, int index) {
+                return ListTile(
+                  selected: selectedContacts.contains(
+                    nameList[index].toString(),
+                  ),
+                  onTap: () {
+                    if (selectedContacts.contains(
+                      nameList[index].toString(),
+                    )) {
+                      selectedContacts.remove(
+                        nameList[index]['avatar'],
+                      );
+                    } else {
+                      selectedContacts.add(
+                        nameList[index]['avatar'],
+                      );
+                    }
+
+                    setState(() {});
+                  },
+                  leading: Stack(
+                    children: [
+                      CircleAvatar(
+                        backgroundImage: AssetImage(
+                          nameList[index]['avatar'],
+                        ),
+                      ),
+                      if (selectedContacts.contains(nameList[index]['avatar']))
+                        Positioned(
+                          top: 24,
+                          left: 24,
+                          child: Container(
+                            clipBehavior: Clip.none,
+                            decoration: BoxDecoration(
+                              color: Colors.teal,
+                              border: Border.all(color: Colors.white),
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                            child: GestureDetector(
+                              onTap: () {
+                                selectedContacts.add(
+                                  nameList[index]['avatar'],
+                                );
+                                setState(() {});
+                              },
+                              child: const Icon(
+                                Icons.check,
+                                size: 15,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
+                  title: Text(
+                    nameList[index]['name'],
+                    style: const TextStyle(
+                        fontWeight: FontWeight.w500, fontSize: 18),
+                  ),
+                  subtitle: Text(newgroupSubtitle[index]),
+                );
+              },
             ),
-            subtitle: Text(newgroupSubtitle[index]),
-          );
-        },
+          ],
+        ),
       ),
     );
   }
