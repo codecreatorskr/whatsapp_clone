@@ -29,7 +29,7 @@ class CreateCallLinkScreen extends StatelessWidget {
           ),
           ListTile(
             leading: CircleAvatar(
-              backgroundColor: Colors.teal,
+              backgroundColor: Color.fromARGB(255, 26, 202, 185),
               child: Icon(
                 Icons.videocam,
                 color: Colors.white,

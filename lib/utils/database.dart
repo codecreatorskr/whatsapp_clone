@@ -455,42 +455,42 @@ List<String> subtitle = [
   '↙ 1 September, 12:55',
   '↗ 1 September, 04:59',
 ];
-List<Map<String, IconData>> arrowicon = [
+List<Map<String, IconData>> callIcon = [
   {
-    'icons': Icons.arrow_outward_rounded,
+    'icons': Icons.call,
   },
   {
-    'icons': Icons.arrow_outward_rounded,
+    'icons': Icons.call,
   },
   {
-    'icons': Icons.arrow_outward_rounded,
+    'icons': Icons.videocam,
   },
   {
-    'icons': Icons.arrow_outward_rounded,
+    'icons': Icons.call,
   },
   {
-    'icons': Icons.arrow_outward_rounded,
+    'icons': Icons.videocam,
   },
   {
-    'icons': Icons.arrow_outward_rounded,
+    'icons': Icons.call,
   },
   {
-    'icons': Icons.arrow_outward_rounded,
+    'icons': Icons.call,
   },
   {
-    'icons': Icons.arrow_outward_rounded,
+    'icons': Icons.videocam,
   },
   {
-    'icons': Icons.arrow_outward_rounded,
+    'icons': Icons.videocam,
   },
   {
-    'icons': Icons.arrow_outward_rounded,
+    'icons': Icons.videocam,
   },
   {
-    'icons': Icons.arrow_outward_rounded,
+    'icons': Icons.call,
   },
   {
-    'icons': Icons.arrow_outward_rounded,
+    'icons': Icons.videocam,
   },
 ];
 

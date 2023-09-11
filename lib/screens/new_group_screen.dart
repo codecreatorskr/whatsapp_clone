@@ -163,7 +163,9 @@ class _NewGroupScreenState extends State<NewGroupScreen> {
                     style: const TextStyle(
                         fontWeight: FontWeight.w500, fontSize: 18),
                   ),
-                  subtitle: Text(newgroupSubtitle[index]),
+                  subtitle: Text(
+                    newgroupSubtitle[index],
+                  ),
                 );
               },
             ),
