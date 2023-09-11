@@ -1,6 +1,8 @@
 //Drawer list (images links)
 
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/models/messages.dart';
+import 'package:whatsapp_clone/models/user_model.dart';
 
 List<Map<String, dynamic>> myList = [
   {
@@ -495,4 +497,17 @@ List<Map<String, IconData>> arrowicon = [
 ];
 
 //(Models) List of models classes.
-// List<UserModel> users = List.generate(12, (index) => UserModel);
+List<UserModel> users = List.generate(
+  20,
+  (index) => UserModel(
+    name: 'some${index + 1}',
+    avatar: 'https://picsum.photos/id/${100 + index}/380/600',
+    meaasge: List.generate(
+      20,
+      (index) => Messages(
+        text: 'text${index + 12}',
+        time: TimeOfDay.now(),
+      ),
+    ),
+  ),
+);
