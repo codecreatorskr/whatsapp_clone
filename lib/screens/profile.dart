@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/utils/database.dart';
+import 'package:whatsapp_clone/utils/routes.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -18,20 +20,33 @@ class ProfileScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Container(
-            margin: const EdgeInsets.symmetric(vertical: 35, horizontal: 50),
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
+          InkWell(
+            onTap: () {
+              Navigator.pushNamed(context, Routes.profile);
+            },
+            child: Container(
+              margin: const EdgeInsets.symmetric(vertical: 35, horizontal: 50),
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+              ),
+              height: 200,
+              width: 300,
+              clipBehavior: Clip.hardEdge,
+              child: ListView.builder(
+                itemCount: 1,
+                itemBuilder: (BuildContext context, int index) {
+                  return Image.asset(chatList[index]['avatar'],);
+                },
+              ),
             ),
-            height: 200,
-            width: 300,
-            clipBehavior: Clip.hardEdge,
-            child: Image.asset('assets/images/dp.webp'),
           ),
           const ListTile(
-            leading: Icon(
-              Icons.person,
-              color: Color.fromARGB(255, 153, 152, 152),
+            leading: Padding(
+              padding: EdgeInsets.only(bottom: 45),
+              child: Icon(
+                Icons.person,
+                color: Color.fromARGB(255, 153, 152, 152),
+              ),
             ),
             title: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,7 +73,7 @@ class ProfileScreen extends StatelessWidget {
           ),
           const ListTile(
             leading: Icon(
-              Icons.circle,
+              Icons.info_outline,
               color: Color.fromARGB(255, 153, 152, 152),
             ),
             title: Text('About'),

@@ -397,7 +397,7 @@ List<String> callssubtitle = [
   'Busy',
 ];
 
-//*************Icons_List*******************/
+//************* setting Icons_List*******************/
 List<Map<String, IconData>> settingIconList = [
   {
     'icons': Icons.key,
@@ -427,6 +427,8 @@ List<Map<String, IconData>> settingIconList = [
   //   'icons': Icons.group,
   // },
 ];
+//************* setting List*******************/
+
 List<Map<String, dynamic>> setingScreenTitleSubtitle = [
   {'title': 'Account', 'subtitle': 'Security notification, change number'},
   {'title': 'Privacy', 'subtitle': 'Block contacts, disappearing message'},
