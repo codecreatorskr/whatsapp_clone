@@ -6,11 +6,13 @@ class Routes {
   static const home = '/';
   static const contact = '/ContactSelectScreen';
   static const group = '/NewGroupScreen';
+  // static const chat = '/ChattingPage';
   static const profile = '/ProfileImageScreen';
 
   static final routes = {
     home: (contact) => const WhatsAppLandingScreen(),
     contact: (contact) => const NewGroupScreen(),
     profile: (context) => const ProfileImageScreen(),
+    // chat: (context) => ChattingPage(index: index),
   };
 }

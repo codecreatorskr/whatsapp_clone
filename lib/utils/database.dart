@@ -440,8 +440,59 @@ List<Map<String, dynamic>> setingScreenTitleSubtitle = [
   {'title': 'Help', 'subtitle': 'Help center, contact us privacy policy'},
   // {'title': 'Invite a friend', 'subtitle': ''},
 ];
+//Calls tab Subtitle
+List<String> subtitle = [
+  '↙ 1 September, 12:05',
+  '↙ 1 September, 05:10',
+  '↗ 1 September, 10:05',
+  '↙ 1 September, 12:55',
+  '↗ 1 September, 09:30',
+  '↙ 1 September, 01:55',
+  '↗ 1 September, 08:45',
+  '↗ 1 September, 09:10',
+  '↙ 1 September, 10:05',
+  '↗ 1 September, 05:15',
+  '↙ 1 September, 12:55',
+  '↗ 1 September, 04:59',
+];
+List<Map<String, IconData>> arrowicon = [
+  {
+    'icons': Icons.arrow_outward_rounded,
+  },
+  {
+    'icons': Icons.arrow_outward_rounded,
+  },
+  {
+    'icons': Icons.arrow_outward_rounded,
+  },
+  {
+    'icons': Icons.arrow_outward_rounded,
+  },
+  {
+    'icons': Icons.arrow_outward_rounded,
+  },
+  {
+    'icons': Icons.arrow_outward_rounded,
+  },
+  {
+    'icons': Icons.arrow_outward_rounded,
+  },
+  {
+    'icons': Icons.arrow_outward_rounded,
+  },
+  {
+    'icons': Icons.arrow_outward_rounded,
+  },
+  {
+    'icons': Icons.arrow_outward_rounded,
+  },
+  {
+    'icons': Icons.arrow_outward_rounded,
+  },
+  {
+    'icons': Icons.arrow_outward_rounded,
+  },
+];
 
 //(Models) List of models classes.
 // List<UserModel> users = List.generate(12, (index) => UserModel);
-
-

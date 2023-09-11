@@ -70,7 +70,13 @@ class CallsTabBar extends StatelessWidget {
                     style: const TextStyle(
                         fontWeight: FontWeight.w600, fontSize: 18),
                   ),
-                  subtitle: Text(chatListSubtitle[index]['message']),
+                  subtitle: Text(
+                    subtitle[index],
+                  ),
+                  trailing: const Icon(
+                    Icons.call,
+                    color: Colors.teal,
+                  ),
                 );
               },
             ),

@@ -75,7 +75,7 @@ class _MenuSettingScreenState extends State<MenuSettingScreen> {
                       child: Icon(
                         settingIconList[index]['icons'],
                         color: const Color.fromARGB(255, 119, 116, 116),
-                      )),
+                      ),),
                   title: Text(
                     setingScreenTitleSubtitle[index]['title'],
                     style: const TextStyle(
