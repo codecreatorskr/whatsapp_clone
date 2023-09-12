@@ -1,13 +1,13 @@
-import 'messages.dart';
+import 'messages_model.dart';
 
 class UserModel {
-  final String name;
-  final String avatar;
-  final List<Messages> meaasge;
+  // final List<Map<String, dynamic>> name;
+  final  List<Map<String, dynamic>>  avatar;
+  final List<Messages> message;
 
   UserModel({
-    required this.name,
+    // required this.name,
     required this.avatar,
-    required this.meaasge,
+    required this.message,
   });
 }

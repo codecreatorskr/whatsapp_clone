@@ -260,7 +260,7 @@ class _ChattingPageState extends State<ChattingPage> {
   }
 
 
-
+//function of send message
   void sendMessage() {
     if (textController.text.isNotEmpty) {
       chatList[widget.index]['messages'].add({

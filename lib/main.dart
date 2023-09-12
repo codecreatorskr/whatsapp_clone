@@ -1,6 +1,5 @@
-
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/utils/routes.dart';
+import 'package:whatsapp_clone/screens/landing_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,8 +26,8 @@ class MyApp extends StatelessWidget {
       // },
 
       // 3rd method
-      initialRoute: Routes.home,
-      routes: Routes.routes,
+      // initialRoute: Routes.home,
+      // routes: Routes.routes,
 
       debugShowCheckedModeBanner: false,
       title: "WhatsApp",
@@ -43,9 +42,9 @@ class MyApp extends StatelessWidget {
           iconTheme: IconThemeData(color: Colors.white),
         ),
       ),
-      // home: const Scaffold(
-      //   body: WhatsAppLandingScreen(),
-      // ),
+      home: const Scaffold(
+        body: WhatsAppLandingScreen(),
+      ),
     );
   }
 }

@@ -9,7 +9,7 @@ class NewGroupScreen extends StatefulWidget {
 }
 
 class _NewGroupScreenState extends State<NewGroupScreen> {
-  List<String> selectedContacts = [];
+  List<Map<String, dynamic>> selectedContacts = [];
 
   @override
   Widget build(BuildContext context) {
@@ -54,6 +54,7 @@ class _NewGroupScreenState extends State<NewGroupScreen> {
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
+                // mainAxisAlignment: MainAxisAlignment.start,
                 children: List.generate(
                   selectedContacts.length,
                   (index) => Padding(
@@ -64,12 +65,12 @@ class _NewGroupScreenState extends State<NewGroupScreen> {
                           children: [
                             CircleAvatar(
                               backgroundImage: AssetImage(
-                                nameList[index]['avatar'],
+                                selectedContacts[index]['avatar'],
                               ),
                               radius: 27,
                             ),
                             Text(
-                              nameList[index]['name'],
+                              selectedContacts[index]['name'],
                             ),
                           ],
                         ),
@@ -102,22 +103,22 @@ class _NewGroupScreenState extends State<NewGroupScreen> {
             ListView.builder(
               physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
-              itemCount: nameList.length,
+              itemCount: users[0].avatar.length,
               itemBuilder: (BuildContext context, int index) {
                 return ListTile(
                   selected: selectedContacts.contains(
-                    nameList[index].toString(),
+                    users[index].avatar[index],
                   ),
                   onTap: () {
                     if (selectedContacts.contains(
-                      nameList[index].toString(),
+                      users[index].avatar[index],
                     )) {
                       selectedContacts.remove(
-                        nameList[index]['avatar'],
+                        users[index].avatar[index],
                       );
                     } else {
                       selectedContacts.add(
-                        nameList[index]['avatar'],
+                        users[index].avatar[index],
                       );
                     }
 
@@ -127,10 +128,12 @@ class _NewGroupScreenState extends State<NewGroupScreen> {
                     children: [
                       CircleAvatar(
                         backgroundImage: AssetImage(
-                          nameList[index]['avatar'],
+                          users[index].avatar[index]['avatar'],
                         ),
                       ),
-                      if (selectedContacts.contains(nameList[index]['avatar']))
+                      if (selectedContacts.contains(
+                        users[index].avatar[index],
+                      ))
                         Positioned(
                           top: 24,
                           left: 24,
@@ -144,12 +147,12 @@ class _NewGroupScreenState extends State<NewGroupScreen> {
                             child: GestureDetector(
                               onTap: () {
                                 selectedContacts.add(
-                                  nameList[index]['avatar'],
+                                  users[index].avatar[index]['avatar'],
                                 );
                                 setState(() {});
                               },
                               child: const Icon(
-                                Icons.check,
+                                Icons.done,
                                 size: 15,
                                 color: Colors.white,
                               ),
@@ -159,12 +162,12 @@ class _NewGroupScreenState extends State<NewGroupScreen> {
                     ],
                   ),
                   title: Text(
-                    nameList[index]['name'],
+                    users[index].avatar[index]['name'],
                     style: const TextStyle(
                         fontWeight: FontWeight.w500, fontSize: 18),
                   ),
                   subtitle: Text(
-                    newgroupSubtitle[index],
+                    users[index].avatar[index]['subtitle'],
                   ),
                 );
               },
