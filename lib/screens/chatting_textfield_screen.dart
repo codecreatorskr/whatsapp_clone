@@ -129,7 +129,7 @@ class _ChattingPageState extends State<ChattingPage> {
                     'last seen today at 06:00',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 10.5,
+                      fontSize: 7.6,
                       fontWeight: FontWeight.w500,
                     ),
                   ),

@@ -24,11 +24,11 @@ class ModelsUses extends StatelessWidget {
               );
             },
             leading: CircleAvatar(
-              backgroundImage: NetworkImage(users[index].avatar.last['avatar']),
+              backgroundImage: NetworkImage(users[index].avatar),
             ),
             // title: Text(users[index].name[index]['name']),
-            subtitle: Text(users[index].message.last.textAndTime[index]['message']),
-            trailing: Text('${users[index].message.last.textAndTime[index]} min'),
+            subtitle: Text(users[index].message),
+            trailing: Text('${users[index].message} min'),
           );
         },
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/models/user_model.dart';
 import 'package:whatsapp_clone/utils/database.dart';
 
 class NewGroupScreen extends StatefulWidget {
@@ -9,7 +10,7 @@ class NewGroupScreen extends StatefulWidget {
 }
 
 class _NewGroupScreenState extends State<NewGroupScreen> {
-  List<Map<String, dynamic>> selectedContacts = [];
+  List<UserModel> selectedContact = [];
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +57,7 @@ class _NewGroupScreenState extends State<NewGroupScreen> {
               child: Row(
                 // mainAxisAlignment: MainAxisAlignment.start,
                 children: List.generate(
-                  selectedContacts.length,
+                  users.length,
                   (index) => Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Stack(
@@ -65,12 +66,12 @@ class _NewGroupScreenState extends State<NewGroupScreen> {
                           children: [
                             CircleAvatar(
                               backgroundImage: AssetImage(
-                                selectedContacts[index]['avatar'],
+                                users[index].avatar,
                               ),
                               radius: 27,
                             ),
                             Text(
-                              selectedContacts[index]['name'],
+                              users[index].name,
                             ),
                           ],
                         ),
@@ -84,7 +85,7 @@ class _NewGroupScreenState extends State<NewGroupScreen> {
                             ),
                             child: GestureDetector(
                               onTap: () {
-                                selectedContacts.removeAt(index);
+                                users.removeAt(index);
                                 setState(() {});
                               },
                               child: const Icon(
@@ -103,22 +104,20 @@ class _NewGroupScreenState extends State<NewGroupScreen> {
             ListView.builder(
               physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
-              itemCount: users[0].avatar.length,
+              itemCount: users.length,
               itemBuilder: (BuildContext context, int index) {
                 return ListTile(
-                  selected: selectedContacts.contains(
-                    users[index].avatar[index],
+                  selected: users.contains(
+                    users[index],
                   ),
                   onTap: () {
-                    if (selectedContacts.contains(
-                      users[index].avatar[index],
+                    if (users.contains(
+                      users[index],
                     )) {
-                      selectedContacts.remove(
-                        users[index].avatar[index],
-                      );
+                      users.remove(users[index]);
                     } else {
-                      selectedContacts.add(
-                        users[index].avatar[index],
+                      users.add(
+                        users[index],
                       );
                     }
 
@@ -128,11 +127,11 @@ class _NewGroupScreenState extends State<NewGroupScreen> {
                     children: [
                       CircleAvatar(
                         backgroundImage: AssetImage(
-                          users[index].avatar[index]['avatar'],
+                          users[index].avatar,
                         ),
                       ),
-                      if (selectedContacts.contains(
-                        users[index].avatar[index],
+                      if (users.contains(
+                        users[index],
                       ))
                         Positioned(
                           top: 24,
@@ -146,8 +145,8 @@ class _NewGroupScreenState extends State<NewGroupScreen> {
                             ),
                             child: GestureDetector(
                               onTap: () {
-                                selectedContacts.add(
-                                  users[index].avatar[index]['avatar'],
+                                users.add(
+                                  users[index],
                                 );
                                 setState(() {});
                               },
@@ -162,12 +161,12 @@ class _NewGroupScreenState extends State<NewGroupScreen> {
                     ],
                   ),
                   title: Text(
-                    users[index].avatar[index]['name'],
+                    users[index].name,
                     style: const TextStyle(
                         fontWeight: FontWeight.w500, fontSize: 18),
                   ),
                   subtitle: Text(
-                    users[index].avatar[index]['subtitle'],
+                    users[index].message,
                   ),
                 );
               },

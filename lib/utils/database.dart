@@ -1,7 +1,6 @@
 //Drawer list (images links)
 
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/models/messages_model.dart';
 import 'package:whatsapp_clone/models/user_model.dart';
 
 List<Map<String, dynamic>> myList = [
@@ -640,151 +639,132 @@ List<Map<String, IconData>> callIcon = [
 //(Models) List of models classes.
 List<UserModel> users = [
   UserModel(
-    avatar: [
-      {
-        "avatar": "assets/images/avatar1.png",
-        "name": "Aaliyah",
-        'subtitle': 'Available ☺️'
-      },
-      {
-        "avatar": "assets/images/tony.jpg",
-        "name": "Abigail",
-        'subtitle': 'Busy'
-      },
-      {
-        "avatar": "assets/images/avatar4.jpg",
-        "name": "Bobby",
-        'subtitle': 'At school At the movie 🏫'
-      },
-      {
-        "avatar": "assets/images/images123.jpg",
-        "name": "Bryson ",
-        'subtitle': 'At work'
-      },
-      {
-        "avatar": "assets/images/avatar1.png",
-        "name": "Calvin",
-        'subtitle': 'Battery about to die'
-      },
-      {
-        "avatar": "assets/images/avatar1.png",
-        "name": "Cullen",
-        'subtitle': "Can't talk, WhatsApp only"
-      },
-      {
-        "avatar": "assets/images/avatar.png",
-        "name": "Damon",
-        'subtitle': 'In a meeting'
-      },
-      {
-        "avatar": "assets/images/avatar2.jpg",
-        "name": "Dream",
-        'subtitle': 'At the gym'
-      },
-      {
-        "avatar": "assets/images/avatar3.jpg",
-        "name": "Elle",
-        'subtitle': 'Slipping'
-      },
-      {
-        "avatar": "assets/images/avatar3.jpg",
-        "name": "Ellianna",
-        'subtitle': 'Urgent calls only'
-      },
-      {
-        "avatar": "assets/images/avatar1.png",
-        "name": "Finley",
-        'subtitle': 'Battery about to die'
-      },
-      {
-        "avatar": "assets/images/tony.jpg",
-        "name": "Giavanna",
-        'subtitle': 'Available'
-      },
-      {
-        "avatar": "assets/images/avatar4.jpg",
-        "name": "Hailee",
-        'subtitle': 'At school At the movie 🏫'
-      },
-      {
-        "avatar": "assets/images/avatar2.jpg",
-        "name": " Itzayana ",
-        'subtitle': '  At work'
-      },
-      {
-        "avatar": "assets/images/images123.jpg",
-        "name": "Jamie ",
-        'subtitle': 'Available'
-      },
-      {
-        "avatar": "assets/images/avatar4.jpg",
-        "name": "Kalani",
-        'subtitle': 'Busy'
-      },
-      {
-        "avatar": "assets/images/avatar1.png",
-        "name": "Lyanna",
-        'subtitle': 'Slipping'
-      },
-      {
-        "avatar": "assets/images/avatar1.png",
-        "name": "Mackenzie",
-        'subtitle': 'At the gym'
-      },
-      {
-        "avatar": "assets/images/avatar.png",
-        "name": "Noor",
-        'subtitle': 'Available'
-      },
-      {
-        "avatar": "assets/images/avatar2.jpg",
-        "name": "Mahakal",
-        'subtitle': 'At work'
-      },
-      {
-        "avatar": "assets/images/avatar3.jpg",
-        "name": "Roselyn",
-        'subtitle': 'Battery die'
-      },
-      {
-        "avatar": "assets/images/avatar3.jpg",
-        "name": "Kumar",
-        'subtitle': 'Available'
-      },
-      {
-        "avatar": "assets/images/avatar1.png",
-        "name": "Sunny",
-        'subtitle': 'WhatsApp only'
-      },
-      {
-        "avatar": "assets/images/tony.jpg",
-        "name": "Zaria ",
-        'subtitle': 'Available'
-      },
-      {
-        "avatar": "assets/images/avatar4.jpg",
-        "name": "Zora",
-        'subtitle': 'Slipping'
-      },
-    ],
-    message: [
-      Messages(textAndTime: [
-        {'message': 'Hello !!', 'time': '12:00'},
-        {'message': 'How are you', 'time': '05:05'},
-        {'message': 'I am fine.', 'time': '08:25'},
-        {'message': 'What about you', 'time': '06:10'},
-      ]),
-    ],
+    avatar: "assets/images/avatar1.png",
+    name: "Aaliyah",
+    message: 'Available ☺️',
   ),
+  UserModel(
+    avatar: "assets/images/tony.jpg",
+    name: "Abigail",
+    message: 'Busy',
+  ),
+  UserModel(
+    avatar: "assets/images/avatar4.jpg",
+    name: "Bobby",
+    message: 'At school At the movie 🏫',
+  ),
+  UserModel(
+    avatar: "assets/images/images123.jpg",
+    name: "Bryson",
+    message: 'At work',
+  ),
+  UserModel(
+    avatar: "assets/images/avatar1.png",
+    name: "Calvin",
+    message: 'Battery about to die',
+  ),UserModel(
+    avatar: "assets/images/avatar1.png",
+    name: "Cullen",
+    message:  "Can't talk, WhatsApp only",
+  ),UserModel(
+    avatar: "assets/images/avatar.png",
+    name: "Damon",
+    message: 'In a meeting',
+  ),UserModel(
+    avatar:"assets/images/avatar2.jpg",
+    name: "Dream",
+    message: 'At the gym',
+  ),UserModel(
+    avatar:  "assets/images/avatar3.jpg",
+    name: "Elle",
+    message: 'Slipping',
+  ),UserModel(
+    avatar: "assets/images/avatar3.jpg",
+    name: "Ellianna",
+    message: 'Urgent calls only',
+  ),UserModel(
+    avatar: "assets/images/avatar1.png",
+    name: "Finley",
+    message: 'Battery about to die',
+  ),UserModel(
+    avatar:"assets/images/tony.jpg",
+    name: "Giavanna",
+    message: 'Available',
+  ),UserModel(
+    avatar: "assets/images/avatar4.jpg",
+    name: "Hailee",
+    message: 'At school At the movie 🏫'
+  ),UserModel(
+    avatar:  "assets/images/avatar2.jpg",
+    name: "Itzayana",
+    message: ' At work',
+  ),UserModel(
+    avatar: "assets/images/images123.jpg",
+    name: "Jamie",
+    message: 'Available',
+  ),UserModel(
+    avatar: "assets/images/avatar1.png",
+    name: "Kalani",
+    message: 'Available',
+  ),UserModel(
+    avatar: "assets/images/avatar4.jpg",
+    name: "Aaliyah",
+    message: 'Available',
+  ),
+  //       "avatar": "assets/images/avatar1.png",
+  //       "name": "Lyanna",
+  //       'subtitle': 'Slipping'
+  //     },
+  //     {
+  //       "avatar": "assets/images/avatar1.png",
+  //       "name": "Mackenzie",
+  //       'subtitle': 'At the gym'
+  //     },
+  //     {
+  //       "avatar": "assets/images/avatar.png",
+  //       "name": "Noor",
+  //       'subtitle': 'Available'
+  //     },
+  //     {
+  //       "avatar": "assets/images/avatar2.jpg",
+  //       "name": "Mahakal",
+  //       'subtitle': 'At work'
+  //     },
+  //     {
+  //       "avatar": "assets/images/avatar3.jpg",
+  //       "name": "Roselyn",
+  //       'subtitle': 'Battery die'
+  //     },
+  //     {
+  //       "avatar": "assets/images/avatar3.jpg",
+  //       "name": "Kumar",
+  //       'subtitle': 'Available'
+  //     },
+  //     {
+  //       "avatar": "assets/images/avatar1.png",
+  //       "name": "Sunny",
+  //       'subtitle': 'WhatsApp only'
+  //     },
+  //     {
+  //       "avatar": "assets/images/tony.jpg",
+  //       "name": "Zaria ",
+  //       'subtitle': 'Available'
+  //     },
+  //     {
+  //       "avatar": "assets/images/avatar4.jpg",
+  //       "name": "Zora",
+  //       'subtitle': 'Slipping'
+  //     },
+  //   ],
+  //   message: [
+  //     Messages(textAndTime: [
+  //       {'message': 'Hello !!', 'time': '12:00'},
+  //       {'message': 'How are you', 'time': '05:05'},
+  //       {'message': 'I am fine.', 'time': '08:25'},
+  //       {'message': 'What about you', 'time': '06:10'},
+  //     ]),
+  //   ],
+  // ),
 ];
-
-
-
-
-
-
-
-
-
 
 // avatar: 'https://picsum.photos/id/${100 + index}/380/600',
