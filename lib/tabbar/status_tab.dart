@@ -98,12 +98,13 @@ class StatusBody extends StatelessWidget {
             subtitle: const Text("Tap to add status update"),
           ),
           const Padding(
-            padding: EdgeInsets.only(left: 22, top: 8),
+            padding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
             child: Text("Recent updates"),
           ),
 
           // recent Icon(icon)
           ListView.builder(
+            padding: EdgeInsets.zero,
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             itemCount: 3,
@@ -136,11 +137,12 @@ class StatusBody extends StatelessWidget {
             },
           ),
           const Padding(
-            padding: EdgeInsets.only(top: 12, left: 22),
+            padding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
             child: Text('Viewed updates'),
           ),
 
           ListView.builder(
+            padding: EdgeInsets.zero,
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             itemCount: 5,

@@ -57,14 +57,18 @@ class CallsTabBar extends StatelessWidget {
               padding: EdgeInsets.only(left: 10),
               child: Row(
                 children: [
-                  Text(
-                    'Recent',
-                    style: TextStyle(fontSize: 17),
+                  Padding(
+                    padding: EdgeInsets.only(left: 8.0),
+                    child: Text(
+                      'Recent',
+                      style: TextStyle(fontSize: 17),
+                    ),
                   )
                 ],
               ),
             ),
             ListView.builder(
+              padding: EdgeInsets.zero,
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               itemCount: chatList.length,

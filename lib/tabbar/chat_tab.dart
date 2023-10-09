@@ -33,6 +33,8 @@ class _ChatTabBarScreenState extends State<ChatTabBarScreen> {
       ),
 
       body: ListView.builder(
+        physics: const NeverScrollableScrollPhysics(),
+        padding: EdgeInsets.zero,
         itemCount: chatList.length,
         itemBuilder: (BuildContext context, int index) {
           return ListTile(

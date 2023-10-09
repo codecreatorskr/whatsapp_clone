@@ -42,9 +42,7 @@ class MyApp extends StatelessWidget {
           iconTheme: IconThemeData(color: Colors.white),
         ),
       ),
-      home: const Scaffold(
-        body: WhatsAppLandingScreen(),
-      ),
+      home: const WhatsAppLandingScreen(),
     );
   }
 }
