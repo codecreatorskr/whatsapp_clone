@@ -10,7 +10,7 @@ class NewGroupScreen extends StatefulWidget {
 }
 
 class _NewGroupScreenState extends State<NewGroupScreen> {
-  List<UserModel> selectedContact = [];
+  List<UserModel> selectedUser = [];
 
   @override
   Widget build(BuildContext context) {
@@ -51,13 +51,13 @@ class _NewGroupScreenState extends State<NewGroupScreen> {
       ),
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
-                // mainAxisAlignment: MainAxisAlignment.start,
                 children: List.generate(
-                  users.length,
+                  selectedUser.length,
                   (index) => Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Stack(
@@ -66,12 +66,12 @@ class _NewGroupScreenState extends State<NewGroupScreen> {
                           children: [
                             CircleAvatar(
                               backgroundImage: AssetImage(
-                                users[index].avatar,
+                                selectedUser[index].avatar,
                               ),
                               radius: 27,
                             ),
                             Text(
-                              users[index].name,
+                              selectedUser[index].name,
                             ),
                           ],
                         ),
@@ -85,7 +85,7 @@ class _NewGroupScreenState extends State<NewGroupScreen> {
                             ),
                             child: GestureDetector(
                               onTap: () {
-                                users.removeAt(index);
+                                selectedUser.removeAt(index);
                                 setState(() {});
                               },
                               child: const Icon(
@@ -107,16 +107,16 @@ class _NewGroupScreenState extends State<NewGroupScreen> {
               itemCount: users.length,
               itemBuilder: (BuildContext context, int index) {
                 return ListTile(
-                  selected: users.contains(
+                  selected: selectedUser.contains(
                     users[index],
                   ),
                   onTap: () {
-                    if (users.contains(
+                    if (selectedUser.contains(
                       users[index],
                     )) {
-                      users.remove(users[index]);
+                      selectedUser.remove(users[index]);
                     } else {
-                      users.add(
+                      selectedUser.add(
                         users[index],
                       );
                     }
@@ -130,7 +130,7 @@ class _NewGroupScreenState extends State<NewGroupScreen> {
                           users[index].avatar,
                         ),
                       ),
-                      if (users.contains(
+                      if (selectedUser.contains(
                         users[index],
                       ))
                         Positioned(
