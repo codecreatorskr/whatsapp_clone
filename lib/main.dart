@@ -3,6 +3,7 @@ import 'package:whatsapp_clone/screens/landing_screen.dart';
 
 void main() {
   runApp(const MyApp());
+  // log(kIsWeb.toString());
 }
 
 class MyApp extends StatelessWidget {
@@ -11,19 +12,37 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      //1st method
+      // initialRoute: '/',
+      // routes: {
+      //   '/': (context) => const WhatsAppLandingScreen(),
+      //   '/chats': (context) => const ContactSelectScreen(),
+      // },
+
+      //2nd method using model
+      // initialRoute: Routes.home,
+      // routes: {
+      //   Routes.home: (context) => const WhatsAppLandingScreen(),
+      // },
+
+      // 3rd method
+      // initialRoute: Routes.home,
+      // routes: Routes.routes,
+
       debugShowCheckedModeBanner: false,
       title: "WhatsApp",
       theme: ThemeData(
-        // fontFamily: 'RopaSans',
+        // pageTransitionsTheme: const PageTransitionsTheme(builders: {
+        //   TargetPlatform.android: CupertinoPageTransitionsBuilder(),
+        //   TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+        // }),
         useMaterial3: true,
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.teal,
           iconTheme: IconThemeData(color: Colors.white),
         ),
       ),
-      home: const Scaffold(
-        body: WhatsAppLandingScreen(),
-      ),
+      home: const WhatsAppLandingScreen(),
     );
   }
 }

@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/screens/select_contact_screen.dart';
-import 'package:whatsapp_clone/screens/chatting_screen.dart';
+import 'package:whatsapp_clone/screens/chatting_textfield_screen.dart';
 import 'package:whatsapp_clone/utils/database.dart';
 
-class ChatTabBarScreen extends StatelessWidget {
+class ChatTabBarScreen extends StatefulWidget {
   const ChatTabBarScreen({
     super.key,
   });
 
+  @override
+  State<ChatTabBarScreen> createState() => _ChatTabBarScreenState();
+}
+
+class _ChatTabBarScreenState extends State<ChatTabBarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,11 +33,14 @@ class ChatTabBarScreen extends StatelessWidget {
       ),
 
       body: ListView.builder(
-        // physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
+        padding: EdgeInsets.zero,
         itemCount: chatList.length,
         itemBuilder: (BuildContext context, int index) {
           return ListTile(
             onTap: () {
+              // Navigator.pushNamed(context, '/contact')
+              // Navigator.pushNamed(context, Routes.group);
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -40,7 +48,9 @@ class ChatTabBarScreen extends StatelessWidget {
                     index: index,
                   ),
                 ),
-              );
+              ).then((value) {
+                setState(() {});
+              });
             },
             leading: GestureDetector(
               onTap: () {

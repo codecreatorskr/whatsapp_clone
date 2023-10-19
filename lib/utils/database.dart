@@ -1,6 +1,7 @@
 //Drawer list (images links)
 
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/models/user_model.dart';
 
 List<Map<String, dynamic>> myList = [
   {
@@ -118,7 +119,7 @@ List<Map<String, dynamic>> chatList = [
     "avatar": "assets/images/tony.jpg",
     "name": "Suraj",
     'messages': [
-      {'message': 'Hello surajs!!', 'time': '12:00'},
+      {'message': 'Hello Suraj!!', 'time': '12:00'},
       {'message': 'How are you', 'time': '05:05'},
       {'message': 'I am fine.', 'time': '08:25'},
       {'message': 'What about you', 'time': '06:10'},
@@ -128,7 +129,7 @@ List<Map<String, dynamic>> chatList = [
     "avatar": "assets/images/avatar3.jpg",
     "name": "Ajay Kr",
     'messages': [
-      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'Hello Ajay!!', 'time': '12:00'},
       {'message': 'How are you', 'time': '05:05'},
       {'message': 'I am fine.', 'time': '08:25'},
       {'message': 'What about you', 'time': '06:10'},
@@ -138,7 +139,7 @@ List<Map<String, dynamic>> chatList = [
     "avatar": "assets/images/dp girl 6.jpeg",
     "name": " Anaya ",
     'messages': [
-      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'Hello Anaya !!', 'time': '12:00'},
       {'message': 'How are you', 'time': '05:05'},
       {'message': 'I am fine.', 'time': '08:25'},
       {'message': 'What about you', 'time': '06:10'},
@@ -148,7 +149,7 @@ List<Map<String, dynamic>> chatList = [
     "avatar": "assets/images/images123.jpg",
     "name": "Rimjhim ",
     'messages': [
-      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'Hello Rimjhim!!', 'time': '12:00'},
       {'message': 'How are you', 'time': '05:05'},
       {'message': 'I am fine.', 'time': '08:25'},
       {'message': 'What about you', 'time': '06:10'},
@@ -158,7 +159,7 @@ List<Map<String, dynamic>> chatList = [
     "avatar": "assets/images/avatar5.png",
     "name": "Rajnish",
     'messages': [
-      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'Hello Rajnish!!', 'time': '12:00'},
       {'message': 'How are you', 'time': '05:05'},
       {'message': 'I am fine.', 'time': '08:25'},
       {'message': 'What about you', 'time': '06:10'},
@@ -168,7 +169,7 @@ List<Map<String, dynamic>> chatList = [
     "avatar": "assets/images/Ironman art.jpeg",
     "name": "Sachin",
     'messages': [
-      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'Hello Sachin!!', 'time': '12:00'},
       {'message': 'How are you', 'time': '05:05'},
       {'message': 'I am fine.', 'time': '08:25'},
       {'message': 'What about you', 'time': '06:10'},
@@ -178,7 +179,7 @@ List<Map<String, dynamic>> chatList = [
     "avatar": "assets/images/dp4.jpg",
     "name": "Raj Kr",
     'messages': [
-      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'Hello Raj!!', 'time': '12:00'},
       {'message': 'How are you', 'time': '05:05'},
       {'message': 'I am fine.', 'time': '08:25'},
       {'message': 'What about you', 'time': '06:10'},
@@ -188,7 +189,7 @@ List<Map<String, dynamic>> chatList = [
     "avatar": "assets/images/dp5.jpeg",
     "name": "Ritik",
     'messages': [
-      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'Hello Ritik!!', 'time': '12:00'},
       {'message': 'How are you', 'time': '05:05'},
       {'message': 'I am fine.', 'time': '08:25'},
       {'message': 'What about you', 'time': '06:10'},
@@ -198,7 +199,7 @@ List<Map<String, dynamic>> chatList = [
     "avatar": "assets/images/avatar2.jpg",
     "name": "Mahakal",
     'messages': [
-      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'Hello Mahakal!!', 'time': '12:00'},
       {'message': 'How are you', 'time': '05:05'},
       {'message': 'I am fine.', 'time': '08:25'},
       {'message': 'What about you', 'time': '06:10'},
@@ -208,7 +209,7 @@ List<Map<String, dynamic>> chatList = [
     "avatar": "assets/images/avatar4.jpg",
     "name": "Raj Kr",
     'messages': [
-      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'Hello Rajkumar!!', 'time': '12:00'},
       {'message': 'How are you', 'time': '05:05'},
       {'message': 'I am fine.', 'time': '08:25'},
       {'message': 'What about you', 'time': '06:10'},
@@ -218,7 +219,7 @@ List<Map<String, dynamic>> chatList = [
     "avatar": "assets/images/avatar3.jpg",
     "name": "Kumar",
     'messages': [
-      {'message': 'Hello !!', 'time': '12:00'},
+      {'message': 'Hello Kumar!!', 'time': '12:00'},
       {'message': 'How are you', 'time': '05:05'},
       {'message': 'I am fine.', 'time': '08:25'},
       {'message': 'What about you', 'time': '06:10'},
@@ -228,8 +229,8 @@ List<Map<String, dynamic>> chatList = [
 
 //*****************USer Message List******************/
 List<String> userMessageList = [
-  "hey! Good Morning",
-  "Inbox happiness loading...",
+  "hey! Good Morning💌",
+  "Inbox happiness loading...📥",
   "hey ! how are you",
   "Knock, knock! Who's there? Your awesome message!",
   "A message is like a smile that pops up on your screen. 😁",
@@ -283,23 +284,67 @@ List<String> userMessageList = [
   "Message Description 2",
 ];
 List<Map<String, dynamic>> chatListSubtitle = [
-  {"message": "Message Description", 'time': " Today, 00:00",'subtitle':''},
-  {"message": "Your new message has been arrived", 'time': " Today, 12:00"},
-  {"message": "Message Description 1", 'time': " Today,04:00"},
-  {"message": "Message Description 2", 'time': " Today, 09:00"},
-  {"message": "Your new message has been arrived", 'time': " Today, 05:00"},
-  {"message": "Good Morning", 'time': " Today, 23:00"},
-  {"message": "hey ! how are you", 'time': " Today, 05:00"},
-  {"message": "hey ! how are you", 'time': " Today, 15:00"},
-  {"message": "Message Description", 'time': " Today, 11:00"},
-  {"message": " New Message", 'time': " Today, 02:00"},
-  {"message": "Message Description 2", 'time': " Today, 22:00"},
-  {"message": "Message Description 2", 'time': " Today, 10:00"},
+  {"message": "Message Description", 'time': " Today, 00:00", 'subtitle': ''},
+  {
+    "message": "Your new message has been arrived",
+    'time': " Today, 12:00",
+    'subtitle': 'Anailable'
+  },
+  {
+    "message": "Message Description 1",
+    'time': " Today,04:00",
+    'subtitle': 'Anailable'
+  },
+  {
+    "message": "Message Description 2",
+    'time': " Today, 09:00",
+    'subtitle': 'Anailable'
+  },
+  {
+    "message": "Your new message has been arrived",
+    'time': " Today, 05:00",
+    'subtitle': 'Anailable'
+  },
+  {"message": "Good Morning", 'time': " Today, 23:00", 'subtitle': 'Anailable'},
+  {
+    "message": "hey ! how are you",
+    'time': " Today, 05:00",
+    'subtitle': 'Anailable'
+  },
+  {
+    "message": "hey ! how are you",
+    'time': " Today, 15:00",
+    'subtitle': 'Anailable'
+  },
+  {
+    "message": "Message Description",
+    'time': " Today, 11:00",
+    'subtitle': 'Anailable'
+  },
+  {"message": " New Message", 'time': " Today, 02:00", 'subtitle': 'Anailable'},
+  {
+    "message": "Message Description 2",
+    'time': " Today, 22:00",
+    'subtitle': 'Anailable'
+  },
+  {
+    "message": "Message Description 2",
+    'time': " Today, 10:00",
+    'subtitle': 'Anailable'
+  },
 ];
 
 List<Map<String, dynamic>> statusIcon = [
-  {"statusicon": "assets/images/avatar2.jpg", "status": "Anaya"},
-  {"statusicon": "assets/images/avatar3.jpg", "status": "Ajay Kr"},
+  {
+    "statusicon": "assets/images/avatar2.jpg",
+    "status": "Anaya",
+    'subtitle': 'Anailable'
+  },
+  {
+    "statusicon": "assets/images/avatar3.jpg",
+    "status": "Ajay Kr",
+    'subtitle': 'Anailable'
+  },
 ];
 
 //list for whatsapp menu dialog .
@@ -315,41 +360,139 @@ List<Map<String, dynamic>> menuText = [
 
 //➡️➡️Select contact Name and invite  text list.
 List<Map<String, dynamic>> invitedwhatsapplist = [
-  {"Name": "Aaravi", 'invite': " Invite"},
-  {"Name": "Aditi", 'invite': "Invite"},
-  {"Name": "Aahana", 'invite': " Invite"},
+  {"Name": "Aaravi", 'invite': " Invite", 'subtitle': 'Anailable'},
+  {"Name": "Aditi", 'invite': "Invite", 'subtitle': 'Anailable'},
+  {"Name": "Aahana", 'invite': " Invite", 'subtitle': 'Anailable'},
   {"Name": "Baadal", 'invite': "Invite"}
 ];
 
 //➡️➡️ WhatsApp New Group Images and Name list.
 List<Map<String, dynamic>> nameList = [
-  {"avatar": "assets/images/avatar1.png", "name": "Aaliyah"},
-  {"avatar": "assets/images/tony.jpg", "name": "Abigail"},
-  {"avatar": "assets/images/avatar4.jpg", "name": "Bobby"},
-  {"avatar": "assets/images/avatar2.jpg", "name": " Bobby "},
-  {"avatar": "assets/images/images123.jpg", "name": "Bryson "},
-  {"avatar": "assets/images/avatar4.jpg", "name": "Bryson"},
-  {"avatar": "assets/images/avatar1.png", "name": "Calvin"},
-  {"avatar": "assets/images/avatar1.png", "name": "Cullen"},
-  {"avatar": "assets/images/avatar.png", "name": "Damon"},
-  {"avatar": "assets/images/avatar2.jpg", "name": "Dream"},
-  {"avatar": "assets/images/avatar3.jpg", "name": "Elle"},
-  {"avatar": "assets/images/avatar3.jpg", "name": "Ellianna"},
-  {"avatar": "assets/images/avatar1.png", "name": "Finley"},
-  {"avatar": "assets/images/tony.jpg", "name": "Giavanna"},
-  {"avatar": "assets/images/avatar4.jpg", "name": "Hailee"},
-  {"avatar": "assets/images/avatar2.jpg", "name": " Itzayana "},
-  {"avatar": "assets/images/images123.jpg", "name": "Jamie "},
-  {"avatar": "assets/images/avatar4.jpg", "name": "Kalani"},
-  {"avatar": "assets/images/avatar1.png", "name": "Lyanna"},
-  {"avatar": "assets/images/avatar1.png", "name": "Mackenzie"},
-  {"avatar": "assets/images/avatar.png", "name": "Noor"},
-  {"avatar": "assets/images/avatar2.jpg", "name": "Mahakal"},
-  {"avatar": "assets/images/avatar3.jpg", "name": "Roselyn"},
-  {"avatar": "assets/images/avatar3.jpg", "name": "Kumar"},
-  {"avatar": "assets/images/avatar1.png", "name": "Sunny"},
-  {"avatar": "assets/images/tony.jpg", "name": "Zaria "},
-  {"avatar": "assets/images/avatar4.jpg", "name": "Zora"},
+  {
+    "avatar": "assets/images/avatar1.png",
+    "name": "Aaliyah",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/tony.jpg",
+    "name": "Abigail",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/avatar4.jpg",
+    "name": "Bobby",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/images123.jpg",
+    "name": "Bryson ",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/avatar1.png",
+    "name": "Calvin",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/avatar1.png",
+    "name": "Cullen",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/avatar.png",
+    "name": "Damon",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/avatar2.jpg",
+    "name": "Dream",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/avatar3.jpg",
+    "name": "Elle",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/avatar3.jpg",
+    "name": "Ellianna",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/avatar1.png",
+    "name": "Finley",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/tony.jpg",
+    "name": "Giavanna",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/avatar4.jpg",
+    "name": "Hailee",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/avatar2.jpg",
+    "name": " Itzayana ",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/images123.jpg",
+    "name": "Jamie ",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/avatar4.jpg",
+    "name": "Kalani",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/avatar1.png",
+    "name": "Lyanna",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/avatar1.png",
+    "name": "Mackenzie",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/avatar.png",
+    "name": "Noor",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/avatar2.jpg",
+    "name": "Mahakal",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/avatar3.jpg",
+    "name": "Roselyn",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/avatar3.jpg",
+    "name": "Kumar",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/avatar1.png",
+    "name": "Sunny",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/tony.jpg",
+    "name": "Zaria ",
+    'subtitle': 'Anailable'
+  },
+  {
+    "avatar": "assets/images/avatar4.jpg",
+    "name": "Zora",
+    'subtitle': 'Anailable'
+  },
 ];
 
 // WhatsApp New Group Subtitle
@@ -357,7 +500,6 @@ List<String> newgroupSubtitle = [
   'Available ☺️',
   'Busy ',
   'At school At the movie 🏫',
-  'At work',
   'Battery about to die',
   'Can\'t talk, WhatsApp only',
   'In a meeting',
@@ -397,44 +539,232 @@ List<String> callssubtitle = [
   'Busy',
 ];
 
-//*************Icons_List*******************/
-List<Map<String, IconData>> contactIconList = [
+//************* setting Icons_List*******************/
+List<Map<String, IconData>> settingIconList = [
   {
-    'icons': Icons.group,
+    'icons': Icons.key,
   },
   {
-    'icons': Icons.group_add,
+    'icons': Icons.lock,
   },
   {
-    'icons': Icons.groups,
-  }
+    'icons': Icons.emoji_emotions,
+  },
+  {
+    'icons': Icons.chat,
+  },
+  {
+    'icons': Icons.notifications,
+  },
+  {
+    'icons': Icons.data_usage,
+  },
+  {
+    'icons': Icons.language,
+  },
+  {
+    'icons': Icons.help_outline_sharp,
+  },
+  // {
+  //   'icons': Icons.group,
+  // },
+];
+//************* setting List*******************/
+
+List<Map<String, dynamic>> setingScreenTitleSubtitle = [
+  {'title': 'Account', 'subtitle': 'Security notification, change number'},
+  {'title': 'Privacy', 'subtitle': 'Block contacts, disappearing message'},
+  {'title': 'Avatar', 'subtitle': 'Create, edit, profile photo'},
+  {'title': 'Chats', 'subtitle': 'Theme, walpapers,char history'},
+  {'title': 'Notification', 'subtitle': 'Message, group & call tones'},
+  {'title': 'Storage and data', 'subtitle': 'Network usage, auto-download'},
+  {'title': 'App language', 'subtitle': "English(device's language)"},
+  {'title': 'Help', 'subtitle': 'Help center, contact us privacy policy'},
+  // {'title': 'Invite a friend', 'subtitle': ''},
+];
+//Calls tab Subtitle
+List<String> subtitle = [
+  '↙ 1 September, 12:05',
+  '↙ 1 September, 05:10',
+  '↗ 1 September, 10:05',
+  '↙ 1 September, 12:55',
+  '↗ 1 September, 09:30',
+  '↙ 1 September, 01:55',
+  '↗ 1 September, 08:45',
+  '↗ 1 September, 09:10',
+  '↙ 1 September, 10:05',
+  '↗ 1 September, 05:15',
+  '↙ 1 September, 12:55',
+  '↗ 1 September, 04:59',
+];
+List<Map<String, IconData>> callIcon = [
+  {
+    'icons': Icons.call,
+  },
+  {
+    'icons': Icons.call,
+  },
+  {
+    'icons': Icons.videocam,
+  },
+  {
+    'icons': Icons.call,
+  },
+  {
+    'icons': Icons.videocam,
+  },
+  {
+    'icons': Icons.call,
+  },
+  {
+    'icons': Icons.call,
+  },
+  {
+    'icons': Icons.videocam,
+  },
+  {
+    'icons': Icons.videocam,
+  },
+  {
+    'icons': Icons.videocam,
+  },
+  {
+    'icons': Icons.call,
+  },
+  {
+    'icons': Icons.videocam,
+  },
 ];
 
-//***********************************Chatting Screen*******************************************//
+//(Models) List of models classes.
+List<UserModel> users = [
+  UserModel(
+    avatar: "assets/images/avatar1.png",
+    name: "Aaliyah",
+    message: 'Available ☺️',
+  ),
+  UserModel(
+    avatar: "assets/images/tony.jpg",
+    name: "Abigail",
+    message: 'Busy',
+  ),
+  UserModel(
+    avatar: "assets/images/avatar4.jpg",
+    name: "Bobby",
+    message: 'At school At the movie 🏫',
+  ),
+  UserModel(
+    avatar: "assets/images/images123.jpg",
+    name: "Bryson",
+    message: 'At work',
+  ),
+  UserModel(
+    avatar: "assets/images/avatar1.png",
+    name: "Calvin",
+    message: 'Battery about to die',
+  ),UserModel(
+    avatar: "assets/images/avatar1.png",
+    name: "Cullen",
+    message:  "Can't talk, WhatsApp only",
+  ),UserModel(
+    avatar: "assets/images/avatar.png",
+    name: "Damon",
+    message: 'In a meeting',
+  ),UserModel(
+    avatar:"assets/images/avatar2.jpg",
+    name: "Dream",
+    message: 'At the gym',
+  ),UserModel(
+    avatar:  "assets/images/avatar3.jpg",
+    name: "Elle",
+    message: 'Slipping',
+  ),UserModel(
+    avatar: "assets/images/avatar3.jpg",
+    name: "Ellianna",
+    message: 'Urgent calls only',
+  ),UserModel(
+    avatar: "assets/images/avatar1.png",
+    name: "Finley",
+    message: 'Battery about to die',
+  ),UserModel(
+    avatar:"assets/images/tony.jpg",
+    name: "Giavanna",
+    message: 'Available',
+  ),UserModel(
+    avatar: "assets/images/avatar4.jpg",
+    name: "Hailee",
+    message: 'At school At the movie 🏫'
+  ),UserModel(
+    avatar:  "assets/images/avatar2.jpg",
+    name: "Itzayana",
+    message: ' At work',
+  ),UserModel(
+    avatar: "assets/images/images123.jpg",
+    name: "Jamie",
+    message: 'Available',
+  ),UserModel(
+    avatar: "assets/images/avatar1.png",
+    name: "Kalani",
+    message: 'Available',
+  ),UserModel(
+    avatar: "assets/images/avatar4.jpg",
+    name: "Aaliyah",
+    message: 'Available',
+  ),
+  //       "avatar": "assets/images/avatar1.png",
+  //       "name": "Lyanna",
+  //       'subtitle': 'Slipping'
+  //     },
+  //     {
+  //       "avatar": "assets/images/avatar1.png",
+  //       "name": "Mackenzie",
+  //       'subtitle': 'At the gym'
+  //     },
+  //     {
+  //       "avatar": "assets/images/avatar.png",
+  //       "name": "Noor",
+  //       'subtitle': 'Available'
+  //     },
+  //     {
+  //       "avatar": "assets/images/avatar2.jpg",
+  //       "name": "Mahakal",
+  //       'subtitle': 'At work'
+  //     },
+  //     {
+  //       "avatar": "assets/images/avatar3.jpg",
+  //       "name": "Roselyn",
+  //       'subtitle': 'Battery die'
+  //     },
+  //     {
+  //       "avatar": "assets/images/avatar3.jpg",
+  //       "name": "Kumar",
+  //       'subtitle': 'Available'
+  //     },
+  //     {
+  //       "avatar": "assets/images/avatar1.png",
+  //       "name": "Sunny",
+  //       'subtitle': 'WhatsApp only'
+  //     },
+  //     {
+  //       "avatar": "assets/images/tony.jpg",
+  //       "name": "Zaria ",
+  //       'subtitle': 'Available'
+  //     },
+  //     {
+  //       "avatar": "assets/images/avatar4.jpg",
+  //       "name": "Zora",
+  //       'subtitle': 'Slipping'
+  //     },
+  //   ],
+  //   message: [
+  //     Messages(textAndTime: [
+  //       {'message': 'Hello !!', 'time': '12:00'},
+  //       {'message': 'How are you', 'time': '05:05'},
+  //       {'message': 'I am fine.', 'time': '08:25'},
+  //       {'message': 'What about you', 'time': '06:10'},
+  //     ]),
+  //   ],
+  // ),
+];
 
-// List<Map<String, dynamic>> chats = [
-//   {'message': 'Hello !!', 'time': '  12:00 ✓✓'},
-//   {'message': 'How are you', 'time': '  05:05 ✓'},
-//   {'message': 'I am fine.', 'time': '  08:25 ✓✓'},
-//   {'message': 'What about you', 'time': '  06:10 ✓'},
-// ];
-// List<Map<String, dynamic>> chat = [
-//   {'message': 'Hello !!', 'time': TimeOfDay.now().hour.toString()},
-//   {'message': 'How are you', 'time': TimeOfDay.now().hour.toString()},
-//   {'message': 'I am fine.', 'time': TimeOfDay.now().hour.toString()},
-//   {'message': 'What about you.', 'time': TimeOfDay.now().hour.toString()},
-// ];
-
-//List of WhatsApp chat images or names.
-// List<Chat> chatLists = [
-//   Chat(
-//       name: "Saurabh",
-//       avatar: "assets/images/avatar1.png",
-//       messages: ["Message 1", "Message 2"]),
-//   Chat(
-//       name: "ThePresence flutter",
-//       avatar: "assets/images/tony.jpg",
-//       messages: ["Message 3", "Message 4"]),
-//   // Add more chat entries as needed
-// ];
-
+// avatar: 'https://picsum.photos/id/${100 + index}/380/600',

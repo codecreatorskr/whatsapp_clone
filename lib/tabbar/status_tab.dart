@@ -2,7 +2,8 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/screens/edit_stauts_screen.dart';
-import 'package:whatsapp_clone/screens/status_view_screen.dart';
+import 'package:whatsapp_clone/screens/recent_status_view_screen.dart';
+import 'package:whatsapp_clone/screens/viewed_update_screen.dart';
 import 'package:whatsapp_clone/utils/database.dart';
 
 class StatusTabBar extends StatelessWidget {
@@ -97,12 +98,13 @@ class StatusBody extends StatelessWidget {
             subtitle: const Text("Tap to add status update"),
           ),
           const Padding(
-            padding: EdgeInsets.only(left: 22, top: 8),
+            padding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
             child: Text("Recent updates"),
           ),
 
           // recent Icon(icon)
           ListView.builder(
+            padding: EdgeInsets.zero,
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             itemCount: 3,
@@ -111,10 +113,12 @@ class StatusBody extends StatelessWidget {
                 iconColor: Colors.white,
                 onTap: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => StatusViewscreen(index: index),
-                      ));
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          RecentStatusViewscreen(index: index),
+                    ),
+                  );
                 },
                 leading: CircleAvatar(
                   backgroundImage: AssetImage(
@@ -133,16 +137,25 @@ class StatusBody extends StatelessWidget {
             },
           ),
           const Padding(
-            padding: EdgeInsets.only(top: 12, left: 22),
+            padding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
             child: Text('Viewed updates'),
           ),
 
           ListView.builder(
+            padding: EdgeInsets.zero,
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             itemCount: 5,
             itemBuilder: (context, index) {
               return ListTile(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => StatusViewscreen(index: index),
+                    ),
+                  );
+                },
                 iconColor: Colors.white,
                 leading: CircleAvatar(
                   backgroundImage: AssetImage(

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/utils/database.dart';
 
-class StatusViewscreen extends StatefulWidget {
+class RecentStatusViewscreen extends StatefulWidget {
   final int index;
 
-  const StatusViewscreen({super.key, required this.index});
+  const RecentStatusViewscreen({super.key, required this.index});
 
   @override
-  State<StatusViewscreen> createState() => _StatusViewscreenState();
+  State<RecentStatusViewscreen> createState() => _RecentStatusViewscreenState();
 }
 
-class _StatusViewscreenState extends State<StatusViewscreen> {
+class _RecentStatusViewscreenState extends State<RecentStatusViewscreen> {
   @override
   void initState() {
     super.initState();
@@ -59,9 +59,9 @@ class _StatusViewscreenState extends State<StatusViewscreen> {
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                  const Text(
-                    'Today , 12:10',
-                    style: TextStyle(
+                  Text(
+                    chatListSubtitle[widget.index]['time'],
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 10.5,
                       fontWeight: FontWeight.w500,
@@ -80,8 +80,10 @@ class _StatusViewscreenState extends State<StatusViewscreen> {
         ],
       ),
       body: Center(
-        child: Image.asset('assets/images/dp.webp'),
-        // Center(child:Image(image: AssetImage(chatList[index]['avatar'])) ));
+        child: Image(
+          image: NetworkImage(
+              'https://picsum.photos/id/${100 + widget.index}/380/600'),
+        ),
       ),
     );
   }
